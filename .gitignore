@@ -1,0 +1,15 @@
+# dependencies
+venv/
+node_modules/
+
+# local states
+state.json
+bookmarks.csv
+likes.csv
+Newsletter_*.md
+debug_timeout.png
+cron.log
+
+# python cache
+__pycache__/
+*.pyc

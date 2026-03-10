@@ -1,0 +1,45 @@
+name: Scrape & Send Newsletter
+on:
+  schedule:
+    # 08:00 IST is 02:30 UTC. Run Sun & Wed.
+    - cron: '30 2 * * 0,3'
+  workflow_dispatch: # Allows manual triggering from the GitHub interface
+
+jobs:
+  scrape_and_newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright anthropic markdown
+          playwright install chromium
+
+      - name: Run Scraper
+        id: scrape_job
+        env:
+          GITHUB_ACTIONS: "true"
+          X_STATE_JSON: ${{ secrets.X_COOKIES_JSON }}
+        run: |
+          python scraper.py
+          
+      - name: Alert Failure
+        if: failure() && steps.scrape_job.outcome == 'failure'
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python alert_failure.py
+
+      - name: Run Newsletter Generator
+        if: success()
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python newsletter.py
