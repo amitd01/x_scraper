@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install playwright anthropic markdown
+          pip install playwright anthropic markdown pypdf requests
           playwright install chromium
 
       - name: Run Scraper
@@ -43,3 +43,11 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python newsletter.py
+
+      - name: Commit State
+        if: always()
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add brain.json || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: persist memory brain [skip ci]" && git push)

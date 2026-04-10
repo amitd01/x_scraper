@@ -21,7 +21,7 @@ source venv/bin/activate
 
 # Install dependencies
 echo "Installing dependencies..."
-pip install playwright anthropic
+pip install playwright anthropic pypdf requests
 
 # Install playwright browsers
 echo "Installing Playwright browsers..."

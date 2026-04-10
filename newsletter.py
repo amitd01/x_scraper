@@ -1,13 +1,19 @@
 import asyncio
 import csv
 import os
+import json
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
+from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
+
 from playwright.async_api import async_playwright
 import anthropic
 import markdown
+import requests
+import io
+import pypdf
 
 # Email Configuration
 SENDER_EMAIL = "amitdas@gmail.com"
@@ -18,35 +24,92 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "pdxo suuj selu yndk")
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "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")
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
+BRAIN_FILE = "brain.json"
+
+def load_brain():
+    if os.path.exists(BRAIN_FILE):
+        try:
+            with open(BRAIN_FILE, 'r') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"seen_tweets": [], "seen_articles": [], "topics": {}}
+
+def save_brain(data):
+    with open(BRAIN_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def normalize_url(url):
+    parsed = urlparse(url)
+    qs = parse_qs(parsed.query)
+    keys_to_remove = [k for k in qs if k.startswith('utm_') or k == 'ref']
+    for k in keys_to_remove:
+        del qs[k]
+    new_query = urlencode(qs, doseq=True)
+    return urlunparse(parsed._replace(query=new_query))
+
+import warnings
+warnings.filterwarnings('ignore', message='Unverified HTTPS request')
+
 async def extract_text_from_url(page, url):
     try:
-        # Navigate to the url, allowing redirects (like t.co -> actual site)
-        await page.goto(url, wait_until="domcontentloaded", timeout=15000)
-        # Give it a second to render
+        # First check headers to find out the real URL and content type using requests
+        resp = requests.head(url, allow_redirects=True, timeout=15, verify=False)
+        content_type = resp.headers.get('Content-Type', '').lower()
+        actual_url = resp.url
+        
+        # If it's a PDF, bypass Playwright entirely
+        if 'application/pdf' in content_type or actual_url.lower().endswith('.pdf'):
+            print(f"    📄 PDF Detected. Downloading and parsing byte stream...")
+            pdf_resp = requests.get(actual_url, timeout=30, verify=False)
+            pdf_resp.raise_for_status()
+            reader = pypdf.PdfReader(io.BytesIO(pdf_resp.content))
+            text_blocks = []
+            for i, pdf_page in enumerate(reader.pages):
+                page_text = pdf_page.extract_text()
+                if page_text:
+                    text_blocks.append(page_text)
+            
+            extracted_text = "\n".join(text_blocks)
+            return extracted_text[:20000], actual_url
+
+        # Otherwise, proceed with Playwright for HTML
+        await page.goto(actual_url, wait_until="domcontentloaded", timeout=15000)
         await page.wait_for_timeout(2000)
-        # Extract the visible text from the body
         text = await page.evaluate("document.body.innerText")
-        actual_url = page.url
         return text, actual_url
     except Exception as e:
         print(f"    ⚠️ Failed to fetch {url}: {e}")
         return "", url
 
-def generate_summary(text, url):
+def generate_summary(text, url, is_tweet_only=False):
     if not text.strip():
         return "Could not extract readable content from the page. It might be behind a paywall, a PDF, or blocked."
         
-    prompt = f"""
-    You are an expert research assistant. Read the following text extracted from a webpage ({url}).
-    
-    INSTRUCTIONS:
-    1. If the text appears to be a research paper or scientific article, provide a summary capturing the **APPROACH** and **FINDINGS**.
-    2. Otherwise, provide a concise ~250-word summary of the main points of the article/page.
-    3. Format your response cleanly with markdown headers or bullet points if appropriate.
-    
-    TEXT TO SUMMARIZE:
-    {text[:20000]} 
-    """ # Limiting character count to stay well within token limits and reduce costs
+    if is_tweet_only:
+        prompt = f"""
+        You are an expert research assistant. Read the following long-form post extracted from X/Twitter ({url}).
+        
+        INSTRUCTIONS:
+        1. Summarize the core insight, narrative, or point of the tweet.
+        2. Keep the summary under 150 words.
+        3. Format your response cleanly with markdown headers or bullet points if appropriate.
+        
+        TWEET TO SUMMARIZE:
+        {text[:20000]} 
+        """
+    else:
+        prompt = f"""
+        You are an expert research assistant. Read the following text extracted from a webpage ({url}).
+        
+        INSTRUCTIONS:
+        1. If the text appears to be a research paper or scientific article, provide a summary capturing the **APPROACH** and **FINDINGS**.
+        2. Otherwise, provide a concise ~250-word summary of the main points of the article/page.
+        3. Format your response cleanly with markdown headers or bullet points if appropriate.
+        
+        TEXT TO SUMMARIZE:
+        {text[:20000]} 
+        """ # Limiting character count to stay well within token limits and reduce costs
     
     try:
         message = client.messages.create(
@@ -115,6 +178,8 @@ def send_email(html_content, markdown_content):
         print(f"❌ Failed to send email: {e}")
 
 async def main():
+    brain_data = load_brain()
+    
     print("Reading X Data CSVs...")
     items = []
     
@@ -128,6 +193,12 @@ async def main():
                         links = [l.strip() for l in row['embedded_links'].split(',') if l.strip()]
                         if links:
                             row['links_list'] = links
+                            row['source'] = filename.replace('.csv', '').capitalize()
+                            items.append(row)
+                    else:
+                        # Pure text tweet logic
+                        if len(row.get('text', '')) > 400:
+                            row['links_list'] = []  # No external links
                             row['source'] = filename.replace('.csv', '').capitalize()
                             items.append(row)
                         
@@ -149,23 +220,60 @@ async def main():
         for idx, item in enumerate(items, 1):
             print(f"\n[{idx}/{len(items)}] Processing tweet by {item['author']} from {item['source']}...")
             summaries = []
-            for link in item['links_list']:
-                print(f"  -> Fetching link: {link}")
-                text, actual_url = await extract_text_from_url(page, link)
-                
-                print(f"  -> Generating AI summary for: {actual_url}")
-                summary = generate_summary(text, actual_url)
+            
+            if item.get('links_list'):
+                for link in item['links_list']:
+                    print(f"  -> Fetching link: {link}")
+                    text, actual_url = await extract_text_from_url(page, link)
+                    
+                    norm_url = normalize_url(actual_url)
+                    if norm_url in brain_data.get("seen_articles", []):
+                        print(f"  -> Skipping [Already Summarized Previously]: {norm_url}")
+                        continue
+                    
+                    print(f"  -> Generating AI summary for: {actual_url}")
+                    summary = generate_summary(text, actual_url)
+                    
+                    summaries.append({
+                        'original_url': link,
+                        'actual_url': norm_url,
+                        'summary': summary
+                    })
+                    
+                    brain_data.setdefault("seen_articles", []).append(norm_url)
+            else:
+                # Text-only tweet > 400 chars
+                tweet_url = item['url']
+                norm_url = normalize_url(tweet_url)
+                if norm_url in brain_data.get("seen_articles", []):
+                    print(f"  -> Skipping [Already Summarized Text Tweet]: {norm_url}")
+                    continue
+                    
+                print(f"  -> Generating AI summary for pure long-form text tweet: {tweet_url}")
+                summary = generate_summary(item['text'], tweet_url, is_tweet_only=True)
                 
                 summaries.append({
-                    'original_url': link,
-                    'actual_url': actual_url,
+                    'original_url': tweet_url,
+                    'actual_url': norm_url,
                     'summary': summary
                 })
+                
+                brain_data.setdefault("seen_articles", []).append(norm_url)
             
-            item['summaries'] = summaries
-            results.append(item)
-            
+            if summaries:
+                item['summaries'] = summaries
+                results.append(item)
+            else:
+                print(f"  -> Skipping Tweet: Existing content already processed in the past.")
+                
         await browser.close()
+        
+    # Save brain after processing all links
+    save_brain(brain_data)
+        
+    if not results:
+        print("\nNo new articles to summarize. All links were already present in brain.json.")
+        return
         
     date_str = datetime.now().strftime("%Y-%m-%d")
     md_filename = f"Newsletter_{date_str}.md"
