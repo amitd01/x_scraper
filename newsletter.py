@@ -16,8 +16,8 @@ import io
 import pypdf
 
 # Email Configuration
-SENDER_EMAIL = "amitdas@gmail.com"
-RECEIVER_EMAIL = "amit.das@think360.ai"
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "your_email@gmail.com")
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com")
 # You'll need a Gmail App Password, NOT your regular password.
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 

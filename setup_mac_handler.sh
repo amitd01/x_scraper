@@ -3,10 +3,12 @@
 
 APP_NAME="XScraperRunner.app"
 
+CURRENT_DIR="$PWD"
+
 echo "Creating macOS application..."
 osacompile -o "$APP_NAME" -e "
 on open location this_URL
-    do shell script \"cd '/Users/amitdas/Downloads/WIP Work/Antigravity/x_scraper' && ./run.sh && ./run_newsletter.sh > /tmp/xscraper.log 2>&1 &\"
+    do shell script \"cd '$CURRENT_DIR' && ./run.sh && ./run_newsletter.sh > /tmp/xscraper.log 2>&1 &\"
 end open location
 "
 

@@ -13,3 +13,7 @@ cron.log
 # python cache
 __pycache__/
 *.pyc
+
+# Local environments and secrets
+.env
+XScraperRunner.app/

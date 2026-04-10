@@ -3,8 +3,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 
-SENDER_EMAIL = "amitdas@gmail.com"
-RECEIVER_EMAIL = "amit.das@think360.ai"
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "your_email@gmail.com")
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 
 if not GMAIL_APP_PASSWORD:
