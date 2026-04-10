@@ -49,22 +49,24 @@ Robust evaluations (evals) ensure continuous pipeline health.
 
 ## 5. Sprint Execution Plan
 
-### Sprint 1: Foundation & "The Brain" (Current)
-- Remove `cutoff_date` logic from `scraper.py`, replacing it with a deterministic 50-item hard limit.
+### Sprint 1: Foundation & "The Brain" (Completed)
+- Remove `cutoff_date` logic from `scraper.py`, replacing it with a deterministic ~50-item hard limit.
 - Introduce `brain.json` implementation to track `seen_tweets` and `seen_articles`.
 - Add simple URL normalization to strip UTM parameters.
 - Update `scraper.yml` to automatically `git commit` and push `brain.json` back to `main`.
 
-### Sprint 2: Hardening & Deterministic Evals
+### Sprint 2: Hardening & Deterministic Evals (Completed)
 - Implement strict error boundaries around Playwright extractions (recognizing cookie banners or broken sites).
 - Improve Python console logging to clarify exactly why a tweet was skipped.
-- Add baseline Unit Tests / Evals checking URL normalization and basic JSON read/writes.
+- Native `pypdf` integration utilizing dual-route extraction to bypass headless rendering of PDFs.
 
-### Sprint 3: Enhanced Prompts & Generative Evals
-- Revise the Claude prompt inside `newsletter.py` to handle edge cases (e.g., pure text tweets with no external links).
-- Introduce a lightweight LLM-as-a-judge eval script in the repository to continuously monitor hallucination and formatting compliance.
+### Sprint 3: Enhanced Prompts & Generative Evals (Completed)
+- Revise the Claude prompt inside `newsletter.py` to handle edge cases including standalone raw text tweets natively over 400 characters.
+- Introduce a lightweight LLM-as-a-judge eval script (`eval_hallucinations.py`) in the repository to continuously monitor hallucination and formatting compliance.
 
-### Sprint 4: "Contextual Nuance" & Clustering
-- Evolve `brain.json` into semantic topic clusters.
-- The LLM prompt gets injected with prior context: "You previously read an article by HackerNoon on AI Agents. How does this newly liked tweet relate or contrast with that previous piece?"
-- Newsletters become contextual narratives rather than isolated bullet points.
+### Sprint 4: "Contextual Nuance" & Clustering (Completed)
+- Evolve `brain.json` into semantic topic clusters extracting the real summaries.
+- The LLM prompt injects prior context to dynamically contrast new inputs iteratively.
+- Newsletters formulate coherent "Chapters" grouping data categorically.
+
+**Future Review Note:** Managing Bloatware in Memory and Context Retrieval. As `brain.json` scales over time, the `topics` storage will exponentially increase the token overhead of context injection. Future iterations must implement rigorous strategies like vectorized embeddings (RAG), strict time-based TTL limits (e.g., dropping summaries older than 90 days), or multi-layered summarization of the summaries to combat "context bloatware".

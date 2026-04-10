@@ -82,47 +82,74 @@ async def extract_text_from_url(page, url):
         print(f"    ⚠️ Failed to fetch {url}: {e}")
         return "", url
 
-def generate_summary(text, url, is_tweet_only=False):
+def generate_summary(text, url, brain_data, is_tweet_only=False):
     if not text.strip():
-        return "Could not extract readable content from the page. It might be behind a paywall, a PDF, or blocked."
-        
+        return {"topic_category": "Uncategorized", "summary": "Could not extract readable content from the page."}
+
+    existing_topics = list(brain_data.get("topics", {}).keys())
+    topics_context_str = ", ".join(existing_topics) if existing_topics else "None yet"
+    
+    prior_context_str = ""
+    all_past = []
+    for t_list in brain_data.get("topics", {}).values():
+        all_past.extend(t_list)
+    
+    if all_past:
+        prior_context_str = "PREVIOUS SUMMARIES (Use these to connect themes globally!):\n"
+        for past_item in all_past[-3:]:
+             prior_context_str += f"- {past_item['summary'][:200]}...\n"
+
+    base_instruction = f"""
+    You are an expert research assistant organizing an ongoing newsletter into a Knowledge Graph. 
+    CURRENT TRACKED TOPIC CHAPTERS: {topics_context_str}
+    
+    {prior_context_str}
+    
+    INSTRUCTIONS:
+    1. Determine the single most applicable 'topic_category' for this text. You can reuse an existing chapter or create a concise new one (e.g. 'Startups', 'AI Agents').
+    2. Summarize the text. If it overlaps with any PREVIOUS SUMMARIES, explicitly state how it updates, contrasts, or adds to that prior perspective! Use conversational nuance.
+    3. Output EXCLUSIVELY in valid JSON format in exactly this structure:
+    {{
+        "topic_category": "Topic Name",
+        "summary": "Your detailed synthesis here..."
+    }}
+    """
+    
     if is_tweet_only:
         prompt = f"""
-        You are an expert research assistant. Read the following long-form post extracted from X/Twitter ({url}).
-        
-        INSTRUCTIONS:
-        1. Summarize the core insight, narrative, or point of the tweet.
-        2. Keep the summary under 150 words.
-        3. Format your response cleanly with markdown headers or bullet points if appropriate.
+        {base_instruction}
+        4. Since this is a raw tweet excerpt, explicitly summarize the core narrative under 150 words.
         
         TWEET TO SUMMARIZE:
         {text[:20000]} 
         """
     else:
         prompt = f"""
-        You are an expert research assistant. Read the following text extracted from a webpage ({url}).
-        
-        INSTRUCTIONS:
-        1. If the text appears to be a research paper or scientific article, provide a summary capturing the **APPROACH** and **FINDINGS**.
-        2. Otherwise, provide a concise ~250-word summary of the main points of the article/page.
-        3. Format your response cleanly with markdown headers or bullet points if appropriate.
+        {base_instruction}
+        4. If it's a research paper, ensure you explicitly state **APPROACH** and **FINDINGS**. Otherwise write a cohesive ~250-word contextual synthesis.
         
         TEXT TO SUMMARIZE:
         {text[:20000]} 
-        """ # Limiting character count to stay well within token limits and reduce costs
+        """
     
     try:
         message = client.messages.create(
-            model="claude-sonnet-4-6", # Updated to a model available on this API key
+            model="claude-sonnet-4-6", 
             max_tokens=600,
             temperature=0.3,
-            messages=[
-                {"role": "user", "content": prompt}
-            ]
+            messages=[{"role": "user", "content": prompt}]
         )
-        return message.content[0].text
+        response_text = message.content[0].text
+        
+        if "```json" in response_text:
+            response_text = response_text.split('```json')[1].split('```')[0].strip()
+        elif "```" in response_text:
+            response_text = response_text.split('```')[1].strip()
+            
+        return json.loads(response_text)
     except Exception as e:
-        return f"Error generating summary: {e}"
+        print(f"Error generating summary or parsing JSON: {e}")
+        return {"topic_category": "Uncategorized", "summary": "Error generating summary"}
 
 def send_email(html_content, markdown_content):
     if GMAIL_APP_PASSWORD == "PUT_YOUR_APP_PASSWORD_HERE":
@@ -232,12 +259,19 @@ async def main():
                         continue
                     
                     print(f"  -> Generating AI summary for: {actual_url}")
-                    summary = generate_summary(text, actual_url)
+                    summary_data = generate_summary(text, actual_url, brain_data)
                     
                     summaries.append({
                         'original_url': link,
                         'actual_url': norm_url,
-                        'summary': summary
+                        'topic_category': summary_data.get('topic_category', 'Uncategorized'),
+                        'summary': summary_data.get('summary', 'Error')
+                    })
+                    
+                    cat = summary_data.get('topic_category', 'Uncategorized')
+                    brain_data.setdefault("topics", {}).setdefault(cat, []).append({
+                        "url": norm_url,
+                        "summary": summary_data.get('summary', 'Error')
                     })
                     
                     brain_data.setdefault("seen_articles", []).append(norm_url)
@@ -250,12 +284,19 @@ async def main():
                     continue
                     
                 print(f"  -> Generating AI summary for pure long-form text tweet: {tweet_url}")
-                summary = generate_summary(item['text'], tweet_url, is_tweet_only=True)
+                summary_data = generate_summary(item['text'], tweet_url, brain_data, is_tweet_only=True)
                 
                 summaries.append({
                     'original_url': tweet_url,
                     'actual_url': norm_url,
-                    'summary': summary
+                    'topic_category': summary_data.get('topic_category', 'Uncategorized'),
+                    'summary': summary_data.get('summary', 'Error')
+                })
+                
+                cat = summary_data.get('topic_category', 'Uncategorized')
+                brain_data.setdefault("topics", {}).setdefault(cat, []).append({
+                    "url": norm_url,
+                    "summary": summary_data.get('summary', 'Error')
                 })
                 
                 brain_data.setdefault("seen_articles", []).append(norm_url)
@@ -279,25 +320,35 @@ async def main():
     md_filename = f"Newsletter_{date_str}.md"
     
     print("\nDrafting Newsletter...")
-    md_content = f"# 🗞️ X/Twitter Insights & Research Digest\n"
+    md_content = f"# 🗞️ X/Twitter Contextual Digest\n"
     md_content += f"**Generated on:** {date_str}\n\n"
     md_content += "---\n\n"
     
-    for idx, item in enumerate(results, 1):
-        md_content += f"## {idx}. Tweet by {item['author']} (Saved in {item['source']})\n"
-        md_content += f"[Link to Tweet]({item['url']})\n\n"
-        
-        # Format blockquote nicely
-        formatted_text = item['text'].replace('\n', '\n> ')
-        md_content += f"> {formatted_text}\n\n"
-        
-        md_content += "### Extracted Articles & Summaries:\n"
+    chapters = {}
+    for item in results:
         for summary_info in item['summaries']:
-            url_display = summary_info['actual_url'] if summary_info['actual_url'] else summary_info['original_url']
-            md_content += f"**🔗 Source URL:** [{url_display}]({url_display})\n\n"
-            md_content += f"**📝 Summary & Findings:**\n\n"
-            md_content += f"{summary_info['summary']}\n\n"
-        
+            cat = summary_info['topic_category']
+            chapters.setdefault(cat, []).append({
+                'tweet_url': item['url'],
+                'author': item['author'],
+                'source': item['source'],
+                'tweet_text': item['text'],
+                'actual_url': summary_info['actual_url'],
+                'summary': summary_info['summary']
+            })
+            
+    for topic, entries in chapters.items():
+        md_content += f"## 📚 Chapter: {topic}\n\n"
+        for idx, entry in enumerate(entries, 1):
+            url_display = entry['actual_url'] if entry['actual_url'] else entry['tweet_url']
+            md_content += f"### {idx}. Tweet by {entry['author']} ({entry['source']})\n"
+            md_content += f"**Source Info:** [Original Tweet]({entry['tweet_url']}) | [Actual URL]({url_display})\n\n"
+            
+            form_text = entry['tweet_text'].replace('\n', '\n> ')
+            md_content += f"> {form_text}\n\n"
+            
+            md_content += f"**Contextual Synthesis & Findings:**\n\n"
+            md_content += f"{entry['summary']}\n\n"
         md_content += "---\n\n"
         
     with open(md_filename, 'w', encoding='utf-8') as f:

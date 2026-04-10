@@ -1,70 +1,71 @@
 {
-  "seen_tweets": [
-    "https://x.com/petergyang/status/2038300236175864214",
-    "https://x.com/techNmak/status/2037788648691884207",
-    "https://x.com/startupideaspod/status/2036122417970684148",
-    "https://x.com/sourfraser/status/2035454870204100810",
-    "https://x.com/NGKabra/status/2033833192340525378",
-    "https://x.com/paulg/status/2029612393660133547",
-    "https://x.com/karpathy/status/2030371219518931079",
-    "https://x.com/ahsankhan94/status/2031049027005874393",
-    "https://x.com/kloss_xyz/status/2027272936353370368",
-    "https://x.com/todayyearsold/status/2016555408077504530",
-    "https://x.com/StartupArchive_/status/2013657515536322994",
-    "https://x.com/jerrythornton/status/2007078990172082316",
-    "https://x.com/thekaipullai/status/2002637661983637616",
-    "https://x.com/GeminiApp/status/1972677854380044689",
-    "https://x.com/MandarKagade/status/1967391624746705254",
-    "https://x.com/omooretweets/status/1960726780681376028",
-    "https://x.com/NirantK/status/1954081728525742365",
-    "https://x.com/omooretweets/status/1952749729156370597",
-    "https://x.com/abhijitmajumder/status/1950384582383325231",
-    "https://x.com/ActusDei/status/1920302288364580921",
-    "https://x.com/TansuYegen/status/1914189735200686409",
-    "https://x.com/johnrushx/status/1894220778557902923",
-    "https://x.com/CodeByPoonam/status/1853361754631483895",
-    "https://x.com/jason_koebler/status/1820493304490074391",
-    "https://x.com/InvestmentBook1/status/1807274606144663653",
-    "https://x.com/sajithpai/status/1794428531365093604",
-    "https://x.com/Rainmaker1973/status/1788907188871680141",
-    "https://x.com/SahilBloom/status/1785636565336654262",
-    "https://x.com/RenjitPhilip/status/1747584829422551330",
-    "https://x.com/das_think/status/1513021367004073987",
-    "https://x.com/readswithravi/status/1740625525415227727",
-    "https://x.com/dhavalkulkarni/status/1741008967713833428",
-    "https://x.com/tee2uu/status/1739949700965605563",
-    "https://x.com/Cric_Writer/status/1675673262469292032",
-    "https://x.com/OpenAI/status/1630992406542970880",
-    "https://x.com/babubasu/status/1624704874293395460",
-    "https://x.com/hackernoon/status/2041886181386752132",
-    "https://x.com/socialwithaayan/status/2042121897463443936",
-    "https://x.com/aigleeson/status/2041073339616387468",
-    "https://x.com/jaynitx/status/2041122928918671648",
-    "https://x.com/googlegemma/status/2041512106269319328",
-    "https://x.com/OpenIDEAae/status/2041376831790870781",
-    "https://x.com/emollick/status/2041360670474580069",
-    "https://x.com/NewYorker/status/2041111369655964012",
-    "https://x.com/AlphaSignalAI/status/2040761699116917148",
-    "https://x.com/NickSpisak_/status/2041012360668750229",
-    "https://x.com/simonowens/status/2038648393111683342",
-    "https://x.com/scmallaby/status/2038718369868714089",
-    "https://x.com/dr_cintas/status/2038660653410320556",
-    "https://x.com/itsolelehmann/status/2038661433626333649"
-  ],
+  "seen_tweets": [],
   "seen_articles": [
     "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
     "https://paulgraham.com/brandage.html",
     "https://www.business-standard.com/opinion/columns/the-economy-needs-short-dated-options-125091400789_1.html",
     "https://www.livemint.com/money/personal-finance/itr-forms-ay-2025-26-more-disclosures-details-on-hra-home-loan-tds-11746609511740.html",
     "https://www.404media.co/nvidia-ai-scraping-foundational-model-cosmos-project/",
-    "chrome-error://chromewebdata/",
+    "https://t.co/DUZAWHOhQw",
     "https://openai.com/blog/introducing-chatgpt-and-whisper-apis",
-    "https://www.youtube.com/watch?v=VV-CA3K57v0",
-    "https://hackernoon.com/why-build-an-ai-agent-is-the-wrong-starting-point-for-ai-systems",
-    "https://t.co/tF4HGbrweX",
-    "https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted",
-    "https://karlbode.com/ceo-said-a-thing-journalism/",
-    "https://www.cnbc.com/video/2026/03/30/the-infinity-machine-author-sebastian-mallaby-on-the-quest-for-superintelligence.html?__source=sharebar%7Ctwitter&par=sharebar"
+    "https://www.youtube.com/watch?v=VV-CA3K57v0&feature=youtu.be",
+    "https://openai.com/blog",
+    "https://arxiv.org/pdf/2001.08361"
   ],
-  "topics": {}
+  "topics": {
+    "AI Education & Literacy": [
+      {
+        "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+        "summary": "Anthropic has launched a free online course called 'AI Fluency: Framework & Foundations' through Anthropic Academy, hosted on the Skilljar learning management platform. The course is built around the **AI Fluency Framework**, developed by professors Rick Dakan (Ringling College of Art and Design) and Joseph Feller (University College Cork) between 2023\u20132024, and co-developed with Anthropic's education team led by Maggie Vo and Drew Bent. The framework centers on four interconnected competencies \u2014 **Delegation, Description, Discernment, and Diligence (the '4Ds')** \u2014 designed to help people collaborate with AI systems effectively, efficiently, ethically, and safely, regardless of which specific AI tools or models are in use at any given time. The course spans 14 lectures (~1.1 hours of video), one quiz, and awards a certificate of completion. It's structured into two sections: 'AI Fundamentals & Framework' (conceptual grounding) and 'Practical AI Skills' (hands-on application across creative, business, and educational contexts). Notably, the course itself was co-created with Claude 3.7, and the team includes a transparent 'AI Diligence Statement' disclosing exactly how AI was used in content development \u2014 a meta-demonstration of the framework's principles. The course has already been piloted in undergraduate and postgraduate settings at both partner universities. Anthropic's broader philosophy here is explicitly multidisciplinary: responsible AI engagement can't be addressed by any single domain, which is why the instructors span art & design, information systems, physics/CS, and behavioral psychology."
+      }
+    ],
+    "Brand Strategy & Technology Disruption": [
+      {
+        "url": "https://paulgraham.com/brandage.html",
+        "summary": "This essay by Paul Graham (March 2026) is a sweeping historical analysis of how the Swiss watch industry survived the 'quartz crisis' of the 1970s by pivoting from precision engineering to luxury branding \u2014 and what that transformation reveals about a universal economic force.\n\nThe core argument: **brand is what remains when technology erases substantive product differences**. When quartz movements made mechanical watches obsolete as timekeeping instruments, Swiss watchmakers like Patek Philippe and Audemars Piguet couldn't compete on accuracy or thinness anymore. So they reinvented themselves as status symbols, using distinctive case designs (the Golden Ellipse, Royal Oak, Nautilus), targeted advertising emphasizing *cost* rather than performance, and deliberate supply restriction. The strategy worked \u2014 Swiss watch revenues eventually soared even as unit sales collapsed.\n\nGraham makes a philosophically sharp observation: **branding and good design are fundamentally opposed**. Good design converges on right answers; branding must diverge to be distinctive. This tension forced watchmakers to make deliberately suboptimal design choices (oversized cases, awkward crowns) purely for recognizability.\n\nThe investment banker cohort of the 1980s was the cultural catalyst \u2014 a newly wealthy class eager to display status through 'legitimate' luxury goods, making mechanical watches the perfect vehicle.\n\n**Relevance to tracked themes:** This piece doesn't directly overlap with the AI Education & Literacy thread (Anthropic Academy). However, Graham's central thesis \u2014 that technology commoditizes performance, leaving brand as the differentiator \u2014 has direct implications for AI products and education platforms, where technical capabilities are rapidly equalizing across providers, making brand, trust, and community increasingly decisive competitive factors."
+      }
+    ],
+    "Access Error / Unreadable Content": [
+      {
+        "url": "https://www.business-standard.com/opinion/columns/the-economy-needs-short-dated-options-125091400789_1.html",
+        "summary": "The provided URL (Business Standard opinion column titled 'The Economy Needs Short-Dated Options', dated around September 2025) returned an HTTP 403 Access Denied error via an Akamai edge server, meaning the content could not be retrieved or summarized. No meaningful text was available for analysis. This entry does not connect to any of the current tracked topic chapters \u2014 AI Education & Literacy or Brand Strategy & Technology Disruption \u2014 nor does it overlap with previous summaries on Anthropic Academy's AI Fluency course or Paul Graham's essay on the Swiss watch industry. If this article is intended for inclusion in the Knowledge Graph, the raw text or an accessible version of the article should be provided directly for proper categorization and synthesis."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=VV-CA3K57v0&feature=youtu.be",
+        "summary": "This page contains no substantive readable content \u2014 it appears to be a YouTube video listing page, specifically showing metadata for a video titled 'Mastermind India 2001 - Final Episode' uploaded by the channel 'Quizzitok,' along with a sidebar of algorithmically recommended videos. The content is essentially a YouTube navigation shell: video titles, view counts, channel names, and timestamps, but no actual transcript, article, or meaningful text to synthesize. Like the previous 'Access Error / Unreadable Content' entries in this newsletter archive, this submission does not yield extractable knowledge. It continues a pattern of URLs being submitted that resolve to media player pages rather than written content. Notably, the recommended videos span Indian quiz show history (Mastermind India 1998\u20132002), Indian political commentary (Shashi Tharoor, The Wire), U.S. political satire (Jimmy Kimmel, Stephen Colbert, The Young Turks), and Indian educational/heritage content \u2014 suggesting the source URL may have been pulled from a browsing session on Indian current affairs or quiz culture content. However, none of this constitutes summarizable editorial content. No updates, contrasts, or additions to prior summaries are possible here. Future submissions from this source type should ideally include a direct article URL or copied transcript text to enable meaningful knowledge graph integration."
+      }
+    ],
+    "Personal Finance & Tax Policy": [
+      {
+        "url": "https://www.livemint.com/money/personal-finance/itr-forms-ay-2025-26-more-disclosures-details-on-hra-home-loan-tds-11746609511740.html",
+        "summary": "This Mint Money article (May 7, 2025) provides a detailed breakdown of significant changes to India's Income Tax Return (ITR) forms for Assessment Year 2025-26, as released by the Central Board of Direct Taxes (CBDT). The changes stem primarily from amendments in the Finance (No. 2) Act, 2024, and affect most taxpayer categories across ITR-1 through ITR-4 forms.\n\nKey changes include: (1) Taxpayers with Long-Term Capital Gains (LTCG) up to \u20b91.25 lakh from listed equity and mutual funds can now use the simpler ITR-1 or ITR-4, rather than the more complex ITR-2/ITR-3 \u2014 a meaningful compliance simplification for retail investors. (2) Expanded disclosure requirements for tax-saving deductions (Section 80C, 80D, etc.), HRA, and loan interest, with new dropdown-style fields expected in e-filing utilities. (3) Capital gains must now be reported separately for transactions occurring before and after July 23, 2024, reflecting mid-year tax rate changes introduced by the Finance Act 2024 \u2014 a notably complex requirement affecting real estate and other asset classes. (4) TDS reporting has been widened with section-specific codes for non-salary income, improving reconciliation with Form 26AS/AIS. (5) The asset-and-liability disclosure threshold has been raised from \u20b950 lakh to \u20b91 crore, easing compliance for middle-income taxpayers.\n\nThis article introduces a brand-new topic category to the newsletter's knowledge graph \u2014 Indian personal finance and tax policy \u2014 with no direct overlap with previous summaries on AI education, Swiss watch branding, or the inaccessible Business Standard column. However, it shares a thematic thread with the access-error entry in that both involve financial/regulatory content from Indian business media (Business Standard vs. Mint), suggesting the newsletter may be tracking Indian economic policy more broadly."
+      }
+    ],
+    "AI Data Ethics & Copyright": [
+      {
+        "url": "https://www.404media.co/nvidia-ai-scraping-foundational-model-cosmos-project/",
+        "summary": "This 404 Media investigative report (August 2024) reveals that Nvidia internally scraped massive volumes of video content \u2014 described as 'a human lifetime' of videos per day \u2014 from YouTube, Netflix, and other platforms to train AI models for its unreleased 'Project Cosmos' initiative (distinct from its existing Cosmos deep learning product). The scraped data fed into Nvidia's Omniverse 3D world generator, self-driving car systems, and 'digital human' products. Crucially, leaked Slack messages and internal emails show that when employees raised legal and ethical concerns about using copyrighted content and academic research datasets, managers reassured them the practice had clearance 'from the highest levels of the company.' Nvidia publicly defended the scraping as being 'in full compliance with the letter and the spirit of copyright law.' The story is paywalled beyond the initial details, limiting full access \u2014 a dynamic that loosely echoes the HTTP 403 Access Denied entry already tracked in this newsletter, where content barriers prevent complete analysis. More substantively, this piece adds a critical industrial dimension to the AI Education & Literacy chapter: the question isn't just how AI learns, but *what* it learns from and whether that sourcing is ethically and legally sound. It raises unresolved tensions around fair use doctrine, consent, and corporate accountability in AI development \u2014 themes that are increasingly central to how society understands and governs AI systems. This story is an important data point in the broader conversation about the hidden infrastructure costs \u2014 legal, ethical, and creative \u2014 of building large-scale AI."
+      }
+    ],
+    "Uncategorized": [
+      {
+        "url": "https://t.co/DUZAWHOhQw",
+        "summary": "Could not extract readable content from the page."
+      },
+      {
+        "url": "https://openai.com/blog/introducing-chatgpt-and-whisper-apis",
+        "summary": "Could not extract readable content from the page."
+      },
+      {
+        "url": "https://openai.com/blog",
+        "summary": "Could not extract readable content from the page."
+      }
+    ],
+    "AI Research & Scaling Theory": [
+      {
+        "url": "https://arxiv.org/pdf/2001.08361",
+        "summary": "This is the landmark 2020 OpenAI paper 'Scaling Laws for Neural Language Models' by Kaplan, McCandlish, and colleagues \u2014 one of the most influential papers in modern AI development, essentially providing the theoretical blueprint for the GPT era and beyond.\n\n**APPROACH:** The researchers empirically investigated how Transformer language model performance (measured via cross-entropy loss) scales with three key factors: model parameter count (N), dataset size (D), and compute budget (C). They trained models ranging from ~768 parameters to 1.5 billion parameters on the WebText2 dataset, systematically varying architecture shapes, context lengths, and batch sizes across over seven orders of magnitude in scale.\n\n**FINDINGS:**\n- **Power-law scaling:** Loss scales predictably as a power law with N, D, and C independently, with smooth trends spanning 6\u20138 orders of magnitude. Crucially, architectural details like depth vs. width matter very little \u2014 scale is what dominates.\n- **Optimal compute allocation:** When given a fixed compute budget, the optimal strategy is to train *very large models* on *relatively modest data* and stop well before convergence. This was counterintuitive at the time.\n- **Sample efficiency of large models:** Larger models reach equivalent performance with fewer data points and fewer training steps than smaller models.\n- **Sublinear data scaling:** To avoid overfitting as models grow, data only needs to scale as D \u221d N^0.74 \u2014 meaning an 8x model size increase only requires ~5x more data.\n- **Transfer learning bonus:** Models evaluated on out-of-distribution text show a roughly constant loss penalty, but otherwise improve in lockstep with in-distribution performance.\n\nThis paper has no overlap with the previous summaries (which were all unreadable content errors). It stands as a foundational theoretical contribution that directly informed the development of GPT-3, GPT-4, and essentially every large-scale language model since \u2014 making it essential context for any newsletter tracking AI development trajectories."
+      }
+    ]
+  }
 }
