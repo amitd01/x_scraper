@@ -3,7 +3,7 @@ import anthropic
 
 def run_eval(source_text: str, summary_text: str):
     print("Running Generative Eval with Claude 3 Haiku...")
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "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")
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
     client = anthropic.Anthropic(api_key=api_key)
     
     prompt = f"""

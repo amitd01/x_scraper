@@ -19,9 +19,9 @@ import pypdf
 SENDER_EMAIL = "amitdas@gmail.com"
 RECEIVER_EMAIL = "amit.das@think360.ai"
 # You'll need a Gmail App Password, NOT your regular password.
-GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "pdxo suuj selu yndk")
+GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "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")
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 BRAIN_FILE = "brain.json"
