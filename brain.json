@@ -1,5 +1,56 @@
 {
-  "seen_tweets": [],
+  "seen_tweets": [
+    "https://x.com/petergyang/status/2038300236175864214",
+    "https://x.com/techNmak/status/2037788648691884207",
+    "https://x.com/startupideaspod/status/2036122417970684148",
+    "https://x.com/sourfraser/status/2035454870204100810",
+    "https://x.com/NGKabra/status/2033833192340525378",
+    "https://x.com/kloss_xyz/status/2027272936353370368",
+    "https://x.com/todayyearsold/status/2016555408077504530",
+    "https://x.com/StartupArchive_/status/2013657515536322994",
+    "https://x.com/jerrythornton/status/2007078990172082316",
+    "https://x.com/thekaipullai/status/2002637661983637616",
+    "https://x.com/GeminiApp/status/1972677854380044689",
+    "https://x.com/MandarKagade/status/1967391624746705254",
+    "https://x.com/omooretweets/status/1960726780681376028",
+    "https://x.com/NirantK/status/1954081728525742365",
+    "https://x.com/omooretweets/status/1952749729156370597",
+    "https://x.com/SahilBloom/status/1785636565336654262",
+    "https://x.com/RenjitPhilip/status/1747584829422551330",
+    "https://x.com/das_think/status/1513021367004073987",
+    "https://x.com/readswithravi/status/1740625525415227727",
+    "https://x.com/dhavalkulkarni/status/1741008967713833428",
+    "https://x.com/tee2uu/status/1739949700965605563",
+    "https://x.com/Cric_Writer/status/1675673262469292032",
+    "https://x.com/OpenAI/status/1630992406542970880",
+    "https://x.com/babubasu/status/1624704874293395460",
+    "https://x.com/vishalmisra/status/2042295502935396462",
+    "https://x.com/hackernoon/status/2041886181386752132",
+    "https://x.com/socialwithaayan/status/2042121897463443936",
+    "https://x.com/AnthropicAI/status/2041929199976640948",
+    "https://x.com/aigleeson/status/2041073339616387468",
+    "https://x.com/jaynitx/status/2041122928918671648",
+    "https://x.com/googlegemma/status/2041512106269319328",
+    "https://x.com/OpenIDEAae/status/2041376831790870781",
+    "https://x.com/emollick/status/2041360670474580069",
+    "https://x.com/NewYorker/status/2041111369655964012",
+    "https://x.com/AlphaSignalAI/status/2040761699116917148",
+    "https://x.com/NickSpisak_/status/2041012360668750229",
+    "https://x.com/gregorschub/status/2038498356138532947",
+    "https://x.com/MandarKagade/status/2038438766134821301",
+    "https://x.com/simonowens/status/2038648393111683342",
+    "https://x.com/scmallaby/status/2038718369868714089",
+    "https://x.com/dr_cintas/status/2038660653410320556",
+    "https://x.com/itsolelehmann/status/2038661433626333649",
+    "https://x.com/vishalmisra/status/2038587815236096356",
+    "https://x.com/claudeai/status/2038663014098899416",
+    "https://x.com/RodmanAi/status/2038309494292398522",
+    "https://x.com/vishalmisra/status/2038278066640662533",
+    "https://x.com/ednewtonrex/status/2036036985232511135",
+    "https://x.com/HealthPolicyW/status/2024383700914331889",
+    "https://x.com/AnthropicAI/status/2036179042081317370",
+    "https://x.com/AdamLaneSmith/status/2036095004087558183"
+  ],
   "seen_articles": [
     "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
     "https://paulgraham.com/brandage.html",
@@ -10,7 +61,22 @@
     "https://openai.com/blog/introducing-chatgpt-and-whisper-apis",
     "https://www.youtube.com/watch?v=VV-CA3K57v0&feature=youtu.be",
     "https://openai.com/blog",
-    "https://arxiv.org/pdf/2001.08361"
+    "https://arxiv.org/pdf/2001.08361",
+    "https://medium.com/@vishalmisra/five-bowlers-in-eighteen-years-d615f38e0f43",
+    "https://hackernoon.com/why-build-an-ai-agent-is-the-wrong-starting-point-for-ai-systems",
+    "https://www.anthropic.com/engineering/managed-agents",
+    "https://www.ou.edu/russell/UGcomp/Kerr.pdf",
+    "https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted",
+    "https://arxiv.org/pdf/2603.03144",
+    "https://www.wsj.com/tech/ai/the-sudden-fall-of-openais-most-hyped-product-since-chatgpt-64c730c9?wsj_native_webview=android&ace_environment=androidphone%2Cwebview&ace_config=%7B%22wsj%22%3A%7B%22djcmp%22%3A%7B%22propertyHref%22%3A%22https%3A%2F%2Fwsj.android.app%22%7D%7D%7D&article_is_saved=n",
+    "https://karlbode.com/ceo-said-a-thing-journalism/",
+    "https://www.cnbc.com/video/2026/03/30/the-infinity-machine-author-sebastian-mallaby-on-the-quest-for-superintelligence.html?__source=sharebar%7Ctwitter&par=sharebar",
+    "https://medium.com/@vishalmisra/knuth-just-showed-us-where-to-put-the-human-013c0330ef0a",
+    "https://medium.com/@vishalmisra/the-unbothered-bowler-5cfdebd9faa6",
+    "https://www.theatlantic.com/technology/2026/03/hypocrisy-ai-industry/686477/",
+    "https://healthpolicy-watch.news/investment-in-malaria-venture-yields-13x-health-benefits/",
+    "https://www.anthropic.com/research/introducing-anthropic-science",
+    "https://www.psypost.org/laughter-plays-a-unique-role-in-building-a-secure-father-child-relationship-new-research-suggests/"
   ],
   "topics": {
     "AI Education & Literacy": [
@@ -23,6 +89,10 @@
       {
         "url": "https://paulgraham.com/brandage.html",
         "summary": "This essay by Paul Graham (March 2026) is a sweeping historical analysis of how the Swiss watch industry survived the 'quartz crisis' of the 1970s by pivoting from precision engineering to luxury branding \u2014 and what that transformation reveals about a universal economic force.\n\nThe core argument: **brand is what remains when technology erases substantive product differences**. When quartz movements made mechanical watches obsolete as timekeeping instruments, Swiss watchmakers like Patek Philippe and Audemars Piguet couldn't compete on accuracy or thinness anymore. So they reinvented themselves as status symbols, using distinctive case designs (the Golden Ellipse, Royal Oak, Nautilus), targeted advertising emphasizing *cost* rather than performance, and deliberate supply restriction. The strategy worked \u2014 Swiss watch revenues eventually soared even as unit sales collapsed.\n\nGraham makes a philosophically sharp observation: **branding and good design are fundamentally opposed**. Good design converges on right answers; branding must diverge to be distinctive. This tension forced watchmakers to make deliberately suboptimal design choices (oversized cases, awkward crowns) purely for recognizability.\n\nThe investment banker cohort of the 1980s was the cultural catalyst \u2014 a newly wealthy class eager to display status through 'legitimate' luxury goods, making mechanical watches the perfect vehicle.\n\n**Relevance to tracked themes:** This piece doesn't directly overlap with the AI Education & Literacy thread (Anthropic Academy). However, Graham's central thesis \u2014 that technology commoditizes performance, leaving brand as the differentiator \u2014 has direct implications for AI products and education platforms, where technical capabilities are rapidly equalizing across providers, making brand, trust, and community increasingly decisive competitive factors."
+      },
+      {
+        "url": "https://karlbode.com/ceo-said-a-thing-journalism/",
+        "summary": "This piece by Karl Bode for 'The Fine Print*' (March 30, 2026) is a sharp media criticism essay coining and dissecting the term 'CEO said a thing!' journalism \u2014 a pattern where reporters uncritically amplify executive claims without historical context, expert challenge, or follow-up accountability. Bode argues this isn't accidental laziness but a structural feature of consolidated, ad-dependent U.S. media that functions as a PR apparatus for corporate power. His examples are pointed and timely: Elon Musk's broken promises (ventilators, Flint water, DOGE savings targets), Sam Altman's largely unchallenged AI proclamations, Mark Zuckerberg's advertorial-adjacent coverage, and Tim Sweeney's wildly overstated AI game-dev claims. Bode lays out four defining rules of the genre: no challenge to claims, no historical context, no independent experts, and no follow-up on whether promises materialized. The essay's sharpest insight is that this content may not even be meant for general readers \u2014 it functions as 'swaddling fan fiction for MBAs, advertisers, and event sponsors,' a simulacrum of journalism designed to emotionally validate wealth accumulation rather than inform the public. This connects meaningfully to previous summaries: Sam Altman specifically appears here as a beneficiary of uncritical press coverage, which adds a media-criticism layer to the AI scaling and agent architecture discussions tracked earlier. Where those prior pieces engaged with AI claims on their technical merits, Bode's essay interrogates the *press ecosystem* that amplifies such claims without scrutiny \u2014 a useful meta-frame for evaluating how AI narratives reach public consciousness."
       }
     ],
     "Access Error / Unreadable Content": [
@@ -33,6 +103,26 @@
       {
         "url": "https://www.youtube.com/watch?v=VV-CA3K57v0&feature=youtu.be",
         "summary": "This page contains no substantive readable content \u2014 it appears to be a YouTube video listing page, specifically showing metadata for a video titled 'Mastermind India 2001 - Final Episode' uploaded by the channel 'Quizzitok,' along with a sidebar of algorithmically recommended videos. The content is essentially a YouTube navigation shell: video titles, view counts, channel names, and timestamps, but no actual transcript, article, or meaningful text to synthesize. Like the previous 'Access Error / Unreadable Content' entries in this newsletter archive, this submission does not yield extractable knowledge. It continues a pattern of URLs being submitted that resolve to media player pages rather than written content. Notably, the recommended videos span Indian quiz show history (Mastermind India 1998\u20132002), Indian political commentary (Shashi Tharoor, The Wire), U.S. political satire (Jimmy Kimmel, Stephen Colbert, The Young Turks), and Indian educational/heritage content \u2014 suggesting the source URL may have been pulled from a browsing session on Indian current affairs or quiz culture content. However, none of this constitutes summarizable editorial content. No updates, contrasts, or additions to prior summaries are possible here. Future submissions from this source type should ideally include a direct article URL or copied transcript text to enable meaningful knowledge graph integration."
+      },
+      {
+        "url": "https://medium.com/@vishalmisra/five-bowlers-in-eighteen-years-d615f38e0f43",
+        "summary": "This page returned a Cloudflare bot-verification security block rather than any readable content. The URL (medium.com) suggests this was likely a Medium article, but the security service prevented access, displaying only a verification screen with a Cloudflare Ray ID (9e9fac110f821281). No substantive content could be extracted. This is the third consecutive access error in this newsletter batch \u2014 joining two previous unreadable entries \u2014 which may suggest systematic scraping protections are interfering with content retrieval across multiple sources. If this Medium article was intended to complement the earlier OpenAI Scaling Laws paper summary, its actual content and relevance remain unknown until access can be established through a direct browser session or alternative retrieval method."
+      },
+      {
+        "url": "https://www.ou.edu/russell/UGcomp/Kerr.pdf",
+        "summary": "This entry appears to be Steven Kerr's classic 1995 Academy of Management Executive paper 'On the Folly of Rewarding A, While Hoping for B' \u2014 a landmark piece in organizational behavior that argues institutions routinely reward behaviors contrary to their stated goals (e.g., rewarding short-term metrics while hoping for long-term thinking). However, the actual content of the paper is entirely inaccessible here; the document consists only of repeated copyright restriction notices ('Reproduced with permission of the copyright owner. Further reproduction prohibited without permission.'), with no substantive text available to summarize. Interestingly, the paper's *title* is thematically resonant with several threads in this newsletter \u2014 particularly the AI Agents and AI Research discussions. The Trillo AI piece cautioning against reflexive 'agent-first' thinking, and the Anthropic Managed Agents post wrestling with how to structure incentives and guardrails for autonomous systems, both touch on misaligned reward structures in a technical sense. Kerr's original argument \u2014 that systems get the behavior they incentivize, not the behavior they wish for \u2014 is essentially a precursor to modern AI alignment concerns around reward hacking and Goodhart's Law. That conceptual bridge is worth noting even if the text itself cannot be synthesized. If the full paper becomes accessible, it would likely fit best under a 'Organizational Behavior & Incentive Design' chapter or connect meaningfully to AI alignment discourse."
+      },
+      {
+        "url": "https://www.cnbc.com/video/2026/03/30/the-infinity-machine-author-sebastian-mallaby-on-the-quest-for-superintelligence.html?__source=sharebar%7Ctwitter&par=sharebar",
+        "summary": "This page is a CNBC video embed for a 'Squawk Box' segment featuring Sebastian Mallaby discussing his book 'The Infinity Machine,' which profiles DeepMind co-founder Demis Hassabis and explores the quest for superintelligence and AI safety concerns. However, the actual substantive content \u2014 the interview transcript or video \u2014 is not accessible in this text. What's captured is essentially the page shell: navigation elements, video thumbnails for unrelated segments, footer links, and a privacy/terms notice related to CNBC's acquisition by Versant Media. No meaningful quotes, arguments, or insights from Mallaby's book or the interview are present. While the topic (superintelligence, AI safety, Demis Hassabis/DeepMind) would naturally connect to the AI Research & Scaling Theory chapter \u2014 particularly complementing the OpenAI Scaling Laws paper previously summarized \u2014 there is simply not enough readable content here to synthesize. The book title 'The Infinity Machine' and the mention of superintelligence and safety concerns suggest it could offer a narrative/journalistic counterpoint to the technical scaling literature, but that remains speculative without the actual content. This entry should be flagged as an access error pending a proper transcript or article text."
+      },
+      {
+        "url": "https://medium.com/@vishalmisra/knuth-just-showed-us-where-to-put-the-human-013c0330ef0a",
+        "summary": "This entry is unreadable \u2014 the URL (medium.com) returned a Cloudflare bot-verification security page rather than actual article content. The Ray ID logged is 9e9faf22bb041281. No substantive text, argument, or data could be extracted. This is a recurring category in the newsletter's knowledge graph, indicating that some tracked links are blocked by security middleware before content can be retrieved. No connections to previous summaries (scaling laws, agent-first design critique, or Anthropic's Managed Agents architecture) can be established. The source should be revisited with proper browser access or an alternative retrieval method to determine its actual topic and relevance."
+      },
+      {
+        "url": "https://medium.com/@vishalmisra/the-unbothered-bowler-5cfdebd9faa6",
+        "summary": "This entry is unreadable \u2014 the URL (medium.com) returned a Cloudflare bot-verification page rather than actual article content. The page displays a standard security challenge (Ray ID: 9e9faf5579b813c9) and no substantive text was accessible for summarization. No topic, argument, or findings can be extracted. If this article was intended to connect with previous summaries on AI agents, scaling theory, or related themes, a direct copy-paste of the article text or an alternative access method would be needed to properly categorize and synthesize it."
       }
     ],
     "Personal Finance & Tax Policy": [
@@ -45,6 +135,10 @@
       {
         "url": "https://www.404media.co/nvidia-ai-scraping-foundational-model-cosmos-project/",
         "summary": "This 404 Media investigative report (August 2024) reveals that Nvidia internally scraped massive volumes of video content \u2014 described as 'a human lifetime' of videos per day \u2014 from YouTube, Netflix, and other platforms to train AI models for its unreleased 'Project Cosmos' initiative (distinct from its existing Cosmos deep learning product). The scraped data fed into Nvidia's Omniverse 3D world generator, self-driving car systems, and 'digital human' products. Crucially, leaked Slack messages and internal emails show that when employees raised legal and ethical concerns about using copyrighted content and academic research datasets, managers reassured them the practice had clearance 'from the highest levels of the company.' Nvidia publicly defended the scraping as being 'in full compliance with the letter and the spirit of copyright law.' The story is paywalled beyond the initial details, limiting full access \u2014 a dynamic that loosely echoes the HTTP 403 Access Denied entry already tracked in this newsletter, where content barriers prevent complete analysis. More substantively, this piece adds a critical industrial dimension to the AI Education & Literacy chapter: the question isn't just how AI learns, but *what* it learns from and whether that sourcing is ethically and legally sound. It raises unresolved tensions around fair use doctrine, consent, and corporate accountability in AI development \u2014 themes that are increasingly central to how society understands and governs AI systems. This story is an important data point in the broader conversation about the hidden infrastructure costs \u2014 legal, ethical, and creative \u2014 of building large-scale AI."
+      },
+      {
+        "url": "https://www.theatlantic.com/technology/2026/03/hypocrisy-ai-industry/686477/",
+        "summary": "This Atlantic piece by Alex Reisner (March 20, 2026) is a short but pointed editorial excerpt from the publication's ongoing 'AI Watchdog' investigative series. It centers on a revealing anecdote: a closed-door 2024 lecture by former Google CEO Eric Schmidt to Stanford students, in which he openly advised aspiring AI entrepreneurs to simply steal the content they need to train models, then 'hire lawyers to clean up the mess' if the product succeeds \u2014 and not worry about it if it doesn't. The piece frames this as emblematic of a core hypocrisy in the AI industry: tech companies aggressively defend their own intellectual property while treating creators' copyrighted work as freely available raw material.\n\nThis connects directly to the broader AI data ethics thread running through this newsletter. Where previous entries have focused on the *technical* architecture of AI systems (scaling laws, agent design), this piece zooms out to the *moral and legal culture* enabling those systems to be built in the first place. Schmidt's candid remarks essentially articulate what critics have long alleged \u2014 that copyright infringement wasn't an oversight but a deliberate, calculated risk. By March 2026, the article notes at least 19 lawsuits had been filed against companies including Anthropic and OpenAI, meaning this isn't abstract debate but active litigation. The piece is brief (likely truncated), but its value is as a cultural artifact: a named, senior industry figure on record endorsing 'move fast, steal things, lawyer up later' as a legitimate startup strategy \u2014 a striking contrast to the same industry's fierce protection of its own patents and trade secrets."
       }
     ],
     "Uncategorized": [
@@ -59,12 +153,46 @@
       {
         "url": "https://openai.com/blog",
         "summary": "Could not extract readable content from the page."
+      },
+      {
+        "url": "https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted",
+        "summary": "Error generating summary"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2603.03144",
+        "summary": "Error generating summary"
+      },
+      {
+        "url": "https://www.wsj.com/tech/ai/the-sudden-fall-of-openais-most-hyped-product-since-chatgpt-64c730c9?wsj_native_webview=android&ace_environment=androidphone%2Cwebview&ace_config=%7B%22wsj%22%3A%7B%22djcmp%22%3A%7B%22propertyHref%22%3A%22https%3A%2F%2Fwsj.android.app%22%7D%7D%7D&article_is_saved=n",
+        "summary": "Could not extract readable content from the page."
+      },
+      {
+        "url": "https://healthpolicy-watch.news/investment-in-malaria-venture-yields-13x-health-benefits/",
+        "summary": "This article from Health Policy Watch (February 2026) reports on a Lancet Global Health study evaluating the return on investment of the Medicines for Malaria Venture (MMV), a not-for-profit product development partnership operating since 1999. The study, conducted by researchers from the London School of Economics, Imperial College London, and Cambridge Economic Policy Associates, covers the period 2000\u20132023. Every $1 invested in MMV yielded $13 in monetized health benefits \u2014 a striking 13x return on a total $2.3 billion investment. MMV-supported drugs averted an estimated 1.6 million deaths and 87 million disability-adjusted life years (DALYs), having treated or protected over 1.3 billion people through 19 medicines brought to market. The piece contextualizes this success against a sobering backdrop: malaria still kills ~600,000 people annually (95% in Africa), artemisinin resistance is growing, and the WHO projects 78 million additional cases over five years without new treatments. Climate change and conflict are further compounding risk. A new Novartis drug for newborns developed with MMV launched recently in Ghana, and Phase 3 trials for treatments targeting pregnant women are underway. This article sits outside the newsletter's AI and technology focus and has no meaningful overlap with previous summaries on scaling laws, AI agents, or LLM architecture. It is best categorized as Uncategorized, representing global health investment and infectious disease policy \u2014 a distinct domain that may warrant a new chapter (e.g., 'Global Health Policy') if such content recurs."
+      },
+      {
+        "url": "https://www.psypost.org/laughter-plays-a-unique-role-in-building-a-secure-father-child-relationship-new-research-suggests/",
+        "summary": "This PsyPost article (March 14, 2026) covers a developmental psychology study published in the *Journal of Experimental Child Psychology*, examining how mothers and fathers use humor and laughter to build emotional bonds with their preschool-aged children. **APPROACH:** Researchers recruited 144 English- and French-speaking families, each with a mother, father, and a child aged 3\u20135. Parents were observed in a lab setting attempting to make their child laugh for two minutes (without toys), followed by a standard attachment security assessment via a separation-and-reunion procedure. The team developed a new observational coding tool to categorize parental strategies into two buckets: physical touch/anticipation (tickling, chasing) and movement/sound (silly faces, dancing, nonsense words). **FINDINGS:** Both parents used nearly identical techniques with equal success in generating laughter. However, the *relational significance* of that laughter differed by parent: for fathers, frequent child laughter was directly associated with stronger attachment security. For mothers, laughter volume didn't predict attachment security \u2014 instead, the use of rhythmic, predictable movement-and-sound strategies (like nursery rhymes) was the stronger predictor, suggesting comfort through routine rather than surprise. The study challenges the cultural stereotype that fathers are uniquely the 'fun parent,' while also revealing a nuanced asymmetry in *how* playfulness functions relationally for each parent. Limitations include a homogeneous, highly-educated sample, an artificial lab context, and a cross-sectional design that can't establish causality. This content has no meaningful overlap with the AI-focused newsletter threads tracked previously and is best filed as Uncategorized."
       }
     ],
     "AI Research & Scaling Theory": [
       {
         "url": "https://arxiv.org/pdf/2001.08361",
         "summary": "This is the landmark 2020 OpenAI paper 'Scaling Laws for Neural Language Models' by Kaplan, McCandlish, and colleagues \u2014 one of the most influential papers in modern AI development, essentially providing the theoretical blueprint for the GPT era and beyond.\n\n**APPROACH:** The researchers empirically investigated how Transformer language model performance (measured via cross-entropy loss) scales with three key factors: model parameter count (N), dataset size (D), and compute budget (C). They trained models ranging from ~768 parameters to 1.5 billion parameters on the WebText2 dataset, systematically varying architecture shapes, context lengths, and batch sizes across over seven orders of magnitude in scale.\n\n**FINDINGS:**\n- **Power-law scaling:** Loss scales predictably as a power law with N, D, and C independently, with smooth trends spanning 6\u20138 orders of magnitude. Crucially, architectural details like depth vs. width matter very little \u2014 scale is what dominates.\n- **Optimal compute allocation:** When given a fixed compute budget, the optimal strategy is to train *very large models* on *relatively modest data* and stop well before convergence. This was counterintuitive at the time.\n- **Sample efficiency of large models:** Larger models reach equivalent performance with fewer data points and fewer training steps than smaller models.\n- **Sublinear data scaling:** To avoid overfitting as models grow, data only needs to scale as D \u221d N^0.74 \u2014 meaning an 8x model size increase only requires ~5x more data.\n- **Transfer learning bonus:** Models evaluated on out-of-distribution text show a roughly constant loss penalty, but otherwise improve in lockstep with in-distribution performance.\n\nThis paper has no overlap with the previous summaries (which were all unreadable content errors). It stands as a foundational theoretical contribution that directly informed the development of GPT-3, GPT-4, and essentially every large-scale language model since \u2014 making it essential context for any newsletter tracking AI development trajectories."
+      },
+      {
+        "url": "https://www.anthropic.com/research/introducing-anthropic-science",
+        "summary": "This is Anthropic's launch announcement for a dedicated 'Science Blog,' published March 23, 2026, positioning AI as a transformative force in scientific discovery. Rather than a research paper, it's an editorial mission statement \u2014 but it connects meaningfully to several threads already tracked in this newsletter.\n\nThe post frames Anthropic's scientific ambitions through the lens of their 'Machines of Loving Grace' essay, invoking the idea of a 'compressed 21st century' where decades of scientific progress collapse into years. This is philosophically adjacent to the Scaling Laws paper already tracked here \u2014 where Kaplan et al. laid the empirical groundwork for believing AI capability could grow predictably and dramatically. Anthropic is now narrating the downstream societal consequences of that scaling: AI helping mathematicians find proofs, biologists analyze millions of cells, and individual researchers do what once required whole teams.\n\nCritically, the post doesn't oversell. It acknowledges that current models hallucinate results, are sycophantic, and stumble on problems domain experts find trivial \u2014 echoing the nuanced caution in the previously tracked HackerNoon piece about not over-indexing on agent-first thinking. Fields Medalist Timothy Gowers is quoted capturing the bittersweet current moment: AI speeds up research but still needs human guidance.\n\nThe blog will publish three content types \u2014 Features, Workflows, and Field Notes \u2014 and launches alongside a 'vibe physics' piece about supervising Claude through a real theoretical physics calculation, which directly connects to the Managed Agents architecture post already tracked, showing Claude being orchestrated for long-running, expert-level tasks.\n\nInstitutionally, Anthropic signals serious investment: an AI for Science API credits program, Claude for Life Sciences partnerships, and participation in the multi-billion-dollar Genesis Mission. This is Anthropic publicly staking its mission-level identity to scientific acceleration."
+      }
+    ],
+    "AI Agents": [
+      {
+        "url": "https://hackernoon.com/why-build-an-ai-agent-is-the-wrong-starting-point-for-ai-systems",
+        "summary": "This HackerNoon article by Trillo AI (dated April 7th, 2026) argues against the prevailing 'agent-first' instinct in AI development, making the case that most real-world AI problems are fundamentally *application architecture* problems \u2014 not agent problems. The piece is a mix of philosophical argument and product pitch for Trillo AI's 'blueprint-first' platform.\n\n**Core Argument:** When teams jump straight to building an AI agent, they encounter predictable failures in production \u2014 inconsistent outputs, poor auditability, fragile integrations \u2014 not because the model is weak, but because the surrounding system lacks structure. The author distinguishes between an *agent* (a decision-making AI component) and an *agentic application* (a full system with APIs, microservices, data layers, auth, orchestration, and human interfaces). Agents are parts; applications are systems.\n\n**Blueprint-First Approach:** Trillo AI proposes a structured, multi-step methodology: (0) capture existing system context, (1) discover (not merely collect) requirements iteratively, (2) explore solution architecture trade-offs, (3) co-design a full software specification with humans in the loop, (4) generate layered architecture, (5) produce detailed design artifacts, and (6) generate dependency-aware code. They claim this enables generating 100,000+ lines of production-grade code coherently \u2014 citing one team building a full MRO system (55 entities, 78 endpoints, 114 UI components) in under a week, and another building a DataDog-class observability platform for under $150 in AI costs.\n\n**Relation to Prior Summaries:** This piece complements the scaling laws paper previously tracked \u2014 where Kaplan et al. focused on *model capability* as a function of compute and data, this article argues that raw model intelligence is insufficient without *system design*. It's essentially the engineering counterargument to the 'just scale it' thesis: better architecture, not bigger models or better prompts, is what makes AI reliable in production. A useful conceptual pairing for the newsletter."
+      },
+      {
+        "url": "https://www.anthropic.com/engineering/managed-agents",
+        "summary": "This Anthropic engineering post by Lance Martin, Gabe Cemaj, and Michael Cohen details the architectural design of 'Managed Agents' \u2014 Anthropic's hosted service for running long-horizon Claude agents reliably and securely. It's a meaty systems engineering piece that connects directly to our previous summaries in interesting ways.\n\n**APPROACH:** The core insight is borrowed from operating systems design: just as OS abstractions (process, file, read()) outlasted decades of hardware changes, Managed Agents virtualizes agent components \u2014 session (durable event log), harness (the brain/orchestration loop), and sandbox (execution environment/hands) \u2014 into stable interfaces that can evolve independently. The key architectural move is decoupling the 'brain' (Claude + harness) from the 'hands' (sandboxes, tools) and the 'session' (context log). Each component communicates through minimal interfaces: execute(name, input) \u2192 string for tools, wake(sessionId) for harness recovery, and getEvents() for context retrieval.\n\n**FINDINGS:** This decoupling produced dramatic performance gains \u2014 p50 time-to-first-token dropped ~60% and p95 dropped over 90% \u2014 because containers are now provisioned lazily only when needed. Security improved structurally by ensuring credentials never coexist in the sandbox where Claude's generated code runs. Harness failures became recoverable rather than catastrophic since session state persists externally.\n\n**Connection to prior summaries:** This piece is essentially a practical engineering answer to the HackerNoon 'agent-first' critique. Where that article warned against reflexively building agents for every problem, this post acknowledges the same tension \u2014 noting that harnesses 'encode assumptions about what Claude can't do,' and that those assumptions go stale as models improve (e.g., 'context anxiety' in Sonnet 4.5 was gone in Opus 4.5). Rather than arguing against agents, Anthropic is building infrastructure that stays agnostic about future model capabilities \u2014 a meta-harness philosophy that accommodates both task-specific and general agent patterns. It also implicitly echoes the Scaling Laws paper's spirit: design for a future you can't fully predict."
       }
     ]
   }
