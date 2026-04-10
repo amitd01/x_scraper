@@ -146,7 +146,7 @@ def generate_summary(text, url, brain_data, is_tweet_only=False):
         elif "```" in response_text:
             response_text = response_text.split('```')[1].strip()
             
-        return json.loads(response_text)
+        return json.loads(response_text, strict=False)
     except Exception as e:
         print(f"Error generating summary or parsing JSON: {e}")
         return {"topic_category": "Uncategorized", "summary": "Error generating summary"}

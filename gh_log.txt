@@ -1,0 +1,431 @@
+scrape_and_newsletter	Set up job	﻿2026-04-10T06:14:56.4606017Z Current runner version: '2.333.1'
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4686765Z ##[group]Runner Image Provisioner
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4688360Z Hosted Compute Agent
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4689417Z Version: 20260213.493
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4690510Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4712879Z Build Date: 2026-02-13T00:28:41Z
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4714136Z Worker ID: {ba8d9c5c-52ed-4d7c-b81c-3263c926a155}
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4715318Z Azure Region: eastus2
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4716428Z ##[endgroup]
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4719455Z ##[group]Operating System
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4720556Z Ubuntu
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4721411Z 24.04.4
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4722575Z LTS
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4723565Z ##[endgroup]
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4724514Z ##[group]Runner Image
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4725574Z Image: ubuntu-24.04
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4726710Z Version: 20260406.80.1
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4728586Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260406.80/images/ubuntu/Ubuntu2404-Readme.md
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4731707Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260406.80
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4753775Z ##[endgroup]
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4755951Z ##[group]GITHUB_TOKEN Permissions
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4759172Z Contents: read
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4760307Z Metadata: read
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4761217Z Packages: read
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4762484Z ##[endgroup]
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4765936Z Secret source: Actions
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.4767635Z Prepare workflow directory
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.5392936Z Prepare all required actions
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.5451302Z Getting action download info
+scrape_and_newsletter	Set up job	2026-04-10T06:14:56.9674363Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+scrape_and_newsletter	Set up job	2026-04-10T06:14:57.1041369Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+scrape_and_newsletter	Set up job	2026-04-10T06:14:57.3722642Z Complete job name: scrape_and_newsletter
+scrape_and_newsletter	Checkout code	﻿2026-04-10T06:14:57.4459995Z ##[group]Run actions/checkout@v4
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4460933Z with:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4461369Z   repository: amitd01/x_scraper
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4462348Z   token: ***
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4462776Z   ssh-strict: true
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4463189Z   ssh-user: git
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4463610Z   persist-credentials: true
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4464064Z   clean: true
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4464487Z   sparse-checkout-cone-mode: true
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4464982Z   fetch-depth: 1
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4465390Z   fetch-tags: false
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4465809Z   show-progress: true
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4466215Z   lfs: false
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4466597Z   submodules: false
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4467020Z   set-safe-directory: true
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.4467735Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5706453Z Syncing repository: amitd01/x_scraper
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5714049Z ##[group]Getting Git version info
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5715981Z Working directory is '/home/runner/work/x_scraper/x_scraper'
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5719020Z [command]/usr/bin/git version
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5729034Z git version 2.53.0
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5759849Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5779018Z Temporarily overriding HOME='/home/runner/work/_temp/b6f31292-167f-40ea-a1fa-0915c82d6d59' before making global git config changes
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5781936Z Adding repository directory to the temporary git global config as a safe directory
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5798505Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/x_scraper/x_scraper
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5838208Z Deleting the contents of '/home/runner/work/x_scraper/x_scraper'
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5843642Z ##[group]Initializing the repository
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5849471Z [command]/usr/bin/git init /home/runner/work/x_scraper/x_scraper
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5966814Z hint: Using 'master' as the name for the initial branch. This default branch name
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5969422Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5971940Z hint: to use in all of your new repositories, which will suppress this warning,
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5974628Z hint: call:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5975977Z hint:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5979081Z hint: 	git config --global init.defaultBranch <name>
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5980591Z hint:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5982644Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5984721Z hint: 'development'. The just-created branch can be renamed via this command:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5986585Z hint:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5987588Z hint: 	git branch -m <name>
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5989165Z hint:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5990577Z hint: Disable this message with "git config set advice.defaultBranchName false"
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5993254Z Initialized empty Git repository in /home/runner/work/x_scraper/x_scraper/.git/
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.5998875Z [command]/usr/bin/git remote add origin https://github.com/amitd01/x_scraper
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6027066Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6029009Z ##[group]Disabling automatic garbage collection
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6031121Z [command]/usr/bin/git config --local gc.auto 0
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6067587Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6069515Z ##[group]Setting up auth
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6076080Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6113142Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6435729Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6470315Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6711126Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.6748365Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.7006695Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.7046971Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.7048717Z ##[group]Fetching the repository
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.7057531Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +59ff1ef035f337784387e94fec2e585bfbc83b3d:refs/remotes/origin/main
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9405162Z From https://github.com/amitd01/x_scraper
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9423829Z  * [new ref]         59ff1ef035f337784387e94fec2e585bfbc83b3d -> origin/main
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9448339Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9450266Z ##[group]Determining the checkout info
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9452530Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9456373Z [command]/usr/bin/git sparse-checkout disable
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9521247Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9553810Z ##[group]Checking out the ref
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9558599Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9645820Z Switched to a new branch 'main'
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9650334Z branch 'main' set up to track 'origin/main'.
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9657669Z ##[endgroup]
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9698510Z [command]/usr/bin/git log -1 --format=%H
+scrape_and_newsletter	Checkout code	2026-04-10T06:14:57.9723486Z 59ff1ef035f337784387e94fec2e585bfbc83b3d
+scrape_and_newsletter	Set up Python	﻿2026-04-10T06:14:58.0016635Z ##[group]Run actions/setup-python@v4
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0017482Z with:
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0018002Z   python-version: 3.11
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0018606Z   check-latest: false
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0019417Z   token: ***
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0019980Z   update-environment: true
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0020626Z   allow-prereleases: false
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.0021245Z ##[endgroup]
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.2041185Z ##[group]Installed versions
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.2113247Z Successfully set up CPython (3.11.15)
+scrape_and_newsletter	Set up Python	2026-04-10T06:14:58.2123967Z ##[endgroup]
+scrape_and_newsletter	Install dependencies	﻿2026-04-10T06:14:58.2288821Z ##[group]Run pip install playwright anthropic markdown pypdf requests
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2291162Z [36;1mpip install playwright anthropic markdown pypdf requests[0m
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2293277Z [36;1mplaywright install chromium[0m
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2376612Z shell: /usr/bin/bash -e {0}
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2377794Z env:
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2378948Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2380959Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2383305Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2385092Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2386865Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2388641Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape_and_newsletter	Install dependencies	2026-04-10T06:14:58.2390157Z ##[endgroup]
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.1305089Z Collecting playwright
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.2017497Z   Downloading playwright-1.58.0-py3-none-manylinux1_x86_64.whl.metadata (3.5 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.2426186Z Collecting anthropic
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.2513826Z   Downloading anthropic-0.93.0-py3-none-any.whl.metadata (3.1 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.2780144Z Collecting markdown
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.2865361Z   Downloading markdown-3.10.2-py3-none-any.whl.metadata (5.1 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.3307954Z Collecting pypdf
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.3388795Z   Downloading pypdf-6.9.2-py3-none-any.whl.metadata (7.1 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.3712940Z Collecting requests
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.3795553Z   Downloading requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.4049412Z Collecting pyee<14,>=13 (from playwright)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.4237734Z   Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.5624110Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.5706190Z   Downloading greenlet-3.4.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.7 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.5935187Z Collecting typing-extensions (from pyee<14,>=13->playwright)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6013625Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6317469Z Collecting anyio<5,>=3.5.0 (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6403156Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6567154Z Collecting distro<2,>=1.7.0 (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6646096Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6813449Z Collecting docstring-parser<1,>=0.15 (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.6896810Z   Downloading docstring_parser-0.17.0-py3-none-any.whl.metadata (3.5 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.7121982Z Collecting httpx<1,>=0.25.0 (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.7205293Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.8197060Z Collecting jiter<1,>=0.4.0 (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.8279050Z   Downloading jiter-0.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.9504885Z Collecting pydantic<3,>=1.9.0 (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.9585260Z   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.9839239Z Collecting sniffio (from anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:01.9915781Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.0164468Z Collecting idna>=2.8 (from anyio<5,>=3.5.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.0249336Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.0546446Z Collecting certifi (from httpx<1,>=0.25.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.0626206Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.0831832Z Collecting httpcore==1.* (from httpx<1,>=0.25.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.0914385Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.1093763Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.1169314Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.1334139Z Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.9.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.1410324Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.8440050Z Collecting pydantic-core==2.41.5 (from pydantic<3,>=1.9.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.8519756Z   Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.8693449Z Collecting typing-inspection>=0.4.2 (from pydantic<3,>=1.9.0->anthropic)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.8770320Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.9766226Z Collecting charset_normalizer<4,>=2 (from requests)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:02.9846007Z   Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.0142502Z Collecting urllib3<3,>=1.26 (from requests)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.0217755Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.0420276Z Downloading playwright-1.58.0-py3-none-manylinux1_x86_64.whl (46.2 MB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2439016Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.2/46.2 MB 244.9 MB/s  0:00:00
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2521502Z Downloading greenlet-3.4.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2587946Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.5/613.5 kB 91.3 MB/s  0:00:00
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2664735Z Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2763518Z Downloading anthropic-0.93.0-py3-none-any.whl (627 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2823814Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 627.5/627.5 kB 109.7 MB/s  0:00:00
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.2899756Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3002684Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3103742Z Downloading docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3207110Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3309827Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3412051Z Downloading jiter-0.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (362 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3522584Z Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3654455Z Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3758900Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 246.5 MB/s  0:00:00
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3835091Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.3935768Z Downloading markdown-3.10.2-py3-none-any.whl (108 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4039886Z Downloading pypdf-6.9.2-py3-none-any.whl (333 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4165522Z Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4282599Z Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4386479Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4488697Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4591073Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4690083Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4792618Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4889778Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.4985543Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:03.6184893Z Installing collected packages: urllib3, typing-extensions, sniffio, pypdf, markdown, jiter, idna, h11, greenlet, docstring-parser, distro, charset_normalizer, certifi, annotated-types, typing-inspection, requests, pyee, pydantic-core, httpcore, anyio, pydantic, playwright, httpx, anthropic
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:06.0434906Z 
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:06.0455323Z Successfully installed annotated-types-0.7.0 anthropic-0.93.0 anyio-4.13.0 certifi-2026.2.25 charset_normalizer-3.4.7 distro-1.9.0 docstring-parser-0.17.0 greenlet-3.4.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 jiter-0.13.0 markdown-3.10.2 playwright-1.58.0 pydantic-2.12.5 pydantic-core-2.41.5 pyee-13.0.1 pypdf-6.9.2 requests-2.33.1 sniffio-1.3.1 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.6.3
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:06.9597855Z Downloading Chrome for Testing 145.0.7632.6 (playwright chromium v1208) from https://cdn.playwright.dev/chrome-for-testing-public/145.0.7632.6/linux64/chrome-linux64.zip
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.0628836Z (node:2131) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.0630997Z (Use `node --trace-deprecation ...` to show where the warning was created)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.1313437Z |                                                                                |   0% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.5319711Z |■■■■■■■■                                                                        |  10% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.7414253Z |■■■■■■■■■■■■■■■■                                                                |  20% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.8550654Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:07.9529676Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:08.0493572Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:08.1598658Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:08.2477539Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:08.3381476Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:08.4175096Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:08.5154416Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 167.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:11.9231811Z Chrome for Testing 145.0.7632.6 (playwright chromium v1208) downloaded to /home/runner/.cache/ms-playwright/chromium-1208
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:11.9263743Z Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.0734499Z (node:2143) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.0737202Z (Use `node --trace-deprecation ...` to show where the warning was created)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1455178Z |                                                                                |   0% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1563121Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1660531Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1706277Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1755405Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1784303Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1838329Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1877107Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1914227Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1943281Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.1974957Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.2796811Z FFmpeg (playwright ffmpeg v1011) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.2816169Z Downloading Chrome Headless Shell 145.0.7632.6 (playwright chromium-headless-shell v1208) from https://cdn.playwright.dev/chrome-for-testing-public/145.0.7632.6/linux64/chrome-headless-shell-linux64.zip
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.4290426Z (node:2154) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.4314546Z (Use `node --trace-deprecation ...` to show where the warning was created)
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.5191173Z |                                                                                |   0% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:12.8624978Z |■■■■■■■■                                                                        |  10% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.0225904Z |■■■■■■■■■■■■■■■■                                                                |  20% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.1304153Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.2397986Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.3344377Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.4093543Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.4803799Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.5543848Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.6193671Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:13.6943848Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 110.9 MiB
+scrape_and_newsletter	Install dependencies	2026-04-10T06:15:16.2949071Z Chrome Headless Shell 145.0.7632.6 (playwright chromium-headless-shell v1208) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1208
+scrape_and_newsletter	Run Scraper	﻿2026-04-10T06:15:16.3299816Z ##[group]Run python scraper.py
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3300316Z [36;1mpython scraper.py[0m
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3330392Z shell: /usr/bin/bash -e {0}
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3330763Z env:
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3331156Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3331899Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3332878Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3333503Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3334129Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3334746Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3335278Z   GITHUB_ACTIONS: true
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3419354Z   X_STATE_JSON: ***
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:16.3419739Z ##[endgroup]
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7727742Z Loaded saved session.
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7728323Z 
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7728577Z === Fetching Bookmarks ===
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7729391Z Scrolling through page (10 attempts max)...
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7735946Z Current URL: https://x.com/i/bookmarks
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7736677Z Current URL: https://x.com/i/bookmarks
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7737225Z Current URL: https://x.com/i/bookmarks
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7737759Z Current URL: https://x.com/i/bookmarks
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7738411Z Hit memory boundary (all visible tweets already seen). Stopping scroll early.
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7738958Z 
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7739187Z === Fetching Likes for @das_think ===
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7739687Z Scrolling through page (10 attempts max)...
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7740207Z Current URL: https://x.com/das_think/likes
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7740711Z Current URL: https://x.com/das_think/likes
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7741231Z Current URL: https://x.com/das_think/likes
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7741732Z Current URL: https://x.com/das_think/likes
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7742782Z Reached maximum limit of 50 extracted items. Stopping.
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7743254Z 
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7743801Z ✅ Saved 24 bookmarks to bookmarks.csv
+scrape_and_newsletter	Run Scraper	2026-04-10T06:15:49.7744364Z ✅ Saved 26 likes to likes.csv
+scrape_and_newsletter	Run Newsletter Generator	﻿2026-04-10T06:15:49.8002016Z ##[group]Run python newsletter.py
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8002710Z [36;1mpython newsletter.py[0m
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8024242Z shell: /usr/bin/bash -e {0}
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8024481Z env:
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8024736Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8025166Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8025572Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8025937Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8026290Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8026655Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8027459Z   ANTHROPIC_API_KEY: ***
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8027710Z   GMAIL_APP_PASSWORD: ***
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:15:49.8027926Z ##[endgroup]
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3667266Z Reading X Data CSVs...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3668080Z Found 20 tweets with embedded links.
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3668818Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3669792Z [1/20] Processing tweet by Navin Kabra @NGKabra · Mar 17 from Bookmarks...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3671214Z   -> Fetching link: https://t.co/qEvpVzDpmg
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3672515Z   -> Skipping [Already Summarized Previously]: https://anthropic.skilljar.com/ai-fluency-framework-foundations
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3673717Z   -> Skipping Tweet: Existing content already processed in the past.
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3674321Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3674981Z [2/20] Processing tweet by Mandar Kagade @MandarKagade · Sep 15, 2025 from Bookmarks...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3675836Z   -> Fetching link: https://t.co/fn1iB4jwS7
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3677057Z   -> Skipping [Already Summarized Previously]: https://www.business-standard.com/opinion/columns/the-economy-needs-short-dated-options-125091400789_1.html
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3678415Z   -> Skipping Tweet: Existing content already processed in the past.
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3678991Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3679598Z [3/20] Processing tweet by Anindya Dutta  @Cric_Writer · Jul 3, 2023 from Bookmarks...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3680413Z   -> Fetching link: https://t.co/DUZAWHOhQw
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3681738Z     ⚠️ Failed to fetch https://t.co/DUZAWHOhQw: HTTPSConnectionPool(host='www.washingtonpost.com', port=443): Read timed out. (read timeout=15)
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3683328Z   -> Skipping [Already Summarized Previously]: https://t.co/DUZAWHOhQw
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3684199Z   -> Skipping Tweet: Existing content already processed in the past.
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3684772Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3685314Z [4/20] Processing tweet by OpenAI @OpenAI · Mar 1, 2023 from Bookmarks...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3686081Z   -> Fetching link: https://t.co/vpoyxZ7XnD
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3687037Z   -> Skipping [Already Summarized Previously]: https://openai.com/blog/introducing-chatgpt-and-whisper-apis
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3688104Z   -> Skipping Tweet: Existing content already processed in the past.
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3688673Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3689272Z [5/20] Processing tweet by Siddhartha Basu @babubasu · Feb 12, 2023 from Bookmarks...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3690093Z   -> Fetching link: https://t.co/Z9j0h5nbyl
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3691027Z   -> Skipping [Already Summarized Previously]: https://www.youtube.com/watch?v=VV-CA3K57v0&feature=youtu.be
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3692060Z   -> Skipping Tweet: Existing content already processed in the past.
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3692836Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3693385Z [6/20] Processing tweet by Vishal Misra @vishalmisra · 12h from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3694194Z   -> Fetching link: https://t.co/9TsanPShvV
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3695085Z   -> Generating AI summary for: https://medium.com/@vishalmisra/five-bowlers-in-eighteen-years-d615f38e0f43
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3695896Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3696555Z [7/20] Processing tweet by HackerNoon | Learn Any Technology @hackernoon · Apr 8 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3697420Z   -> Fetching link: https://t.co/EQ3bs5eYgI
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3698417Z   -> Generating AI summary for: https://hackernoon.com/why-build-an-ai-agent-is-the-wrong-starting-point-for-ai-systems
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3699714Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3700272Z [8/20] Processing tweet by Anthropic @AnthropicAI · Apr 8 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3701008Z   -> Fetching link: https://t.co/YYaEub2QGV
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3701781Z   -> Generating AI summary for: https://www.anthropic.com/engineering/managed-agents
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3702747Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3705418Z [9/20] Processing tweet by Ethan Mollick @emollick · Apr 7 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3714561Z   -> Fetching link: https://t.co/tF4HGbrweX
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3715444Z     📄 PDF Detected. Downloading and parsing byte stream...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3716294Z   -> Generating AI summary for: https://www.ou.edu/russell/UGcomp/Kerr.pdf
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3716923Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3717469Z [10/20] Processing tweet by The New Yorker @NewYorker · Apr 6 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3718223Z   -> Fetching link: https://t.co/6QohXo1H8D
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3719758Z   -> Generating AI summary for: https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted?utm_source=twitter&utm_medium=social&utm_campaign=dhtwitter&utm_content=null
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3721852Z Error generating summary or parsing JSON: Unterminated string starting at: line 3 column 14 (char 77)
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3722854Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3723454Z [11/20] Processing tweet by Gregor Schubert @gregorschub · Mar 30 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3724268Z   -> Fetching link: https://t.co/MVqqgCcDK1
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3725016Z     📄 PDF Detected. Downloading and parsing byte stream...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3725759Z   -> Generating AI summary for: https://arxiv.org/pdf/2603.03144
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3726712Z Error generating summary or parsing JSON: Unterminated string starting at: line 3 column 14 (char 67)
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3727453Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3728003Z [12/20] Processing tweet by Mandar Kagade @MandarKagade · Mar 30 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3728790Z   -> Fetching link: https://t.co/HKSZ9LRWMq
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3731023Z   -> Generating AI summary for: https://www.wsj.com/tech/ai/the-sudden-fall-of-openais-most-hyped-product-since-chatgpt-64c730c9?wsj_native_webview=android&ace_environment=androidphone%2Cwebview&ace_config=%7B%22wsj%22%3A%7B%22djcmp%22%3A%7B%22propertyHref%22%3A%22https%3A%2F%2Fwsj.android.app%22%7D%7D%7D&article_is_saved=n
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3733286Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3733862Z [13/20] Processing tweet by Simon Owens @simonowens · Mar 30 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3734602Z   -> Fetching link: https://t.co/gjctqdvfUU
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3735456Z   -> Generating AI summary for: https://karlbode.com/ceo-said-a-thing-journalism/
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3736098Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3736659Z [14/20] Processing tweet by Sebastian Mallaby @scmallaby · Mar 30 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3737394Z   -> Fetching link: https://t.co/QmD1JTAuoW
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3739045Z   -> Generating AI summary for: https://www.cnbc.com/video/2026/03/30/the-infinity-machine-author-sebastian-mallaby-on-the-quest-for-superintelligence.html?__source=sharebar%7Ctwitter&par=sharebar
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3740475Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3741042Z [15/20] Processing tweet by Vishal Misra @vishalmisra · Mar 30 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3741785Z   -> Fetching link: https://t.co/8f6M7dIWBn
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3743022Z   -> Generating AI summary for: https://medium.com/@vishalmisra/knuth-just-showed-us-where-to-put-the-human-013c0330ef0a
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3743904Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3744444Z [16/20] Processing tweet by Vishal Misra @vishalmisra · Mar 29 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3745174Z   -> Fetching link: https://t.co/r7HH92IE1j
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3746014Z   -> Generating AI summary for: https://medium.com/@vishalmisra/the-unbothered-bowler-5cfdebd9faa6
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3746753Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3747300Z [17/20] Processing tweet by Ed Newton-Rex @ednewtonrex · Mar 23 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3748056Z   -> Fetching link: https://t.co/OS3OQAHi3D
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3749204Z   -> Generating AI summary for: https://www.theatlantic.com/technology/2026/03/hypocrisy-ai-industry/686477/
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3750025Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3750621Z [18/20] Processing tweet by Health Policy Watch @HealthPolicyW · Feb 19 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3751448Z   -> Fetching link: https://t.co/RELEsfPiJE
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3752701Z   -> Generating AI summary for: https://healthpolicy-watch.news/investment-in-malaria-venture-yields-13x-health-benefits/
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3753691Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3754232Z [19/20] Processing tweet by Anthropic @AnthropicAI · Mar 23 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3754963Z   -> Fetching link: https://t.co/1P9BDyX3xG
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3755798Z   -> Generating AI summary for: https://www.anthropic.com/research/introducing-anthropic-science
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3756515Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3757245Z [20/20] Processing tweet by Adam Lane Smith | The Attachment Specialist @AdamLaneSmith · Mar 23 from Likes...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3758179Z   -> Fetching link: https://t.co/EQdjHrpGbg
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3759492Z   -> Generating AI summary for: https://www.psypost.org/laughter-plays-a-unique-role-in-building-a-secure-father-child-relationship-new-research-suggests/
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3760866Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3761158Z Drafting Newsletter...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3761511Z 
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3762045Z ✅ Newsletter successfully generated locally: Newsletter_2026-04-10.md
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3763045Z Formatting email HTML...
+scrape_and_newsletter	Run Newsletter Generator	2026-04-10T06:19:34.3763706Z ✅ Email transmitted successfully to amit.das@think360.ai!
+scrape_and_newsletter	Commit State	﻿2026-04-10T06:19:34.5092005Z ##[group]Run git config --global user.name 'github-actions[bot]'
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5092859Z [36;1mgit config --global user.name 'github-actions[bot]'[0m
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5093336Z [36;1mgit config --global user.email 'github-actions[bot]@users.noreply.github.com'[0m
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5093778Z [36;1mgit add brain.json || true[0m
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5094289Z [36;1mgit diff --quiet && git diff --staged --quiet || (git commit -m "chore: persist memory brain [skip ci]" && git push)[0m
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5116516Z shell: /usr/bin/bash -e {0}
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5116755Z env:
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5117006Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5117429Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5117858Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5118228Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5118583Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5118989Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5119288Z ##[endgroup]
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5324200Z [main ae18835] chore: persist memory brain [skip ci]
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.5325011Z  1 file changed, 130 insertions(+), 2 deletions(-)
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.6326615Z remote: Write access to repository not granted.
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.6328055Z fatal: unable to access 'https://github.com/amitd01/x_scraper/': The requested URL returned error: 403
+scrape_and_newsletter	Commit State	2026-04-10T06:19:34.6358790Z ##[error]Process completed with exit code 128.
+scrape_and_newsletter	Post Checkout code	﻿2026-04-10T06:19:34.6464721Z Post job cleanup.
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7467603Z [command]/usr/bin/git version
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7508387Z git version 2.53.0
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7548682Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/a7176b25-bf4d-4822-9d3b-eda96a36e942/.gitconfig'
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7560891Z Temporarily overriding HOME='/home/runner/work/_temp/a7176b25-bf4d-4822-9d3b-eda96a36e942' before making global git config changes
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7562781Z Adding repository directory to the temporary git global config as a safe directory
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7568434Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/x_scraper/x_scraper
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7614303Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7649281Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7908855Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7933868Z http.https://github.com/.extraheader
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7947249Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.7980889Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.8277822Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+scrape_and_newsletter	Post Checkout code	2026-04-10T06:19:34.8313593Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+scrape_and_newsletter	Complete job	﻿2026-04-10T06:19:34.8684994Z Cleaning up orphan processes
+scrape_and_newsletter	Complete job	2026-04-10T06:19:34.8961915Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
