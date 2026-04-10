@@ -21,8 +21,15 @@ RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com
 # You'll need a Gmail App Password, NOT your regular password.
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
-client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+AI_PROVIDER = os.environ.get("AI_PROVIDER", "anthropic").lower()
+
+if AI_PROVIDER == "openai":
+    import openai
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+    client = openai.OpenAI(api_key=OPENAI_API_KEY)
+else:
+    ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 BRAIN_FILE = "brain.json"
 
@@ -133,13 +140,23 @@ def generate_summary(text, url, brain_data, is_tweet_only=False):
         """
     
     try:
-        message = client.messages.create(
-            model="claude-sonnet-4-6", 
-            max_tokens=600,
-            temperature=0.3,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        response_text = message.content[0].text
+        response_text = ""
+        if AI_PROVIDER == "openai":
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=600,
+                temperature=0.3,
+            )
+            response_text = response.choices[0].message.content
+        else:
+            message = client.messages.create(
+                model="claude-sonnet-4-6", 
+                max_tokens=600,
+                temperature=0.3,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            response_text = message.content[0].text
         
         if "```json" in response_text:
             response_text = response_text.split('```json')[1].split('```')[0].strip()
