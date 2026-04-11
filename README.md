@@ -41,6 +41,10 @@ If you prefer running this locally on your machine rather than through GitHub ac
 3. Run `python scraper.py` followed by `python newsletter.py`. 
 
 ### 4. Setting up the GitHub Cron Job
-By default, the `.github/workflows/scraper.yml` is scheduled to automatically scrape your Twitter Likes/Bookmarks and drop the newsletter into your inbox twice a week at `02:30 UTC`. 
+By default, the `.github/workflows/scraper.yml` is scheduled to automatically scrape your Twitter Likes/Bookmarks and drop the newsletter into your inbox twice a week. 
+
+**Default Schedule:**
+- **Days:** Sundays and Wednesdays
+- **Time:** 08:00 IST (02:30 UTC)
 
 You can manually trigger it at any point by going to the `Actions` tab on GitHub, selecting "Scrape & Send Newsletter", and clicking **Run workflow**.
