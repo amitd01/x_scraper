@@ -9,21 +9,21 @@ on:
   workflow_dispatch:
     inputs:
       since_sha:
-        description: 'Git SHA (or ref) to diff brain.json against. Defaults to the commit before HEAD (i.e. the last brain.json state before the failed run persisted summaries).'
+        description: 'Git SHA (or ref) to diff brain.json against. Leave blank to auto-detect (uses the commit immediately before the most recent brain.json change — robust to non-brain merge commits piling up on top).'
         required: false
-        default: 'HEAD~1'
+        default: ''
 
 jobs:
   rebuild:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0  # full history so arbitrary --since SHAs can be resolved
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -38,4 +38,9 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
-        run: python rebuild_newsletter.py --since "${{ inputs.since_sha }}"
+        run: |
+          if [ -n "${{ inputs.since_sha }}" ]; then
+            python rebuild_newsletter.py --since "${{ inputs.since_sha }}"
+          else
+            python rebuild_newsletter.py
+          fi
