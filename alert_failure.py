@@ -3,9 +3,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 
-SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "your_email@gmail.com")
-RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com")
-GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "your_email@gmail.com").strip()
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com").strip()
+# Strip internal whitespace — Google displays App Passwords as "abcd efgh ijkl mnop"
+# but Gmail SMTP rejects the login if those spaces aren't removed before sending.
+_raw_app_password = os.environ.get("GMAIL_APP_PASSWORD") or ""
+GMAIL_APP_PASSWORD = "".join(_raw_app_password.split())
 
 if not GMAIL_APP_PASSWORD:
     print("Cannot send failure alert because GMAIL_APP_PASSWORD is not set.")
