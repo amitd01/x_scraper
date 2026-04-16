@@ -16,10 +16,15 @@ import io
 import pypdf
 
 # Email Configuration
-SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "your_email@gmail.com")
-RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com")
+# .strip() handles trailing newlines/whitespace from copy-paste into GitHub Secrets.
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "your_email@gmail.com").strip()
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "destination_email@example.com").strip()
 # You'll need a Gmail App Password, NOT your regular password.
-GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
+# Google displays app passwords formatted as "abcd efgh ijkl mnop" for readability,
+# but the spaces MUST be stripped before sending to SMTP or Gmail rejects the login
+# with (535, '5.7.8 Username and Password not accepted').
+_raw_app_password = os.environ.get("GMAIL_APP_PASSWORD") or ""
+GMAIL_APP_PASSWORD = "".join(_raw_app_password.split())
 
 AI_PROVIDER = os.environ.get("AI_PROVIDER", "anthropic").lower()
 
@@ -169,10 +174,10 @@ def generate_summary(text, url, brain_data, is_tweet_only=False):
         return {"topic_category": "Uncategorized", "summary": "Error generating summary"}
 
 def send_email(html_content, markdown_content):
-    if GMAIL_APP_PASSWORD == "PUT_YOUR_APP_PASSWORD_HERE":
-        print("\n⚠️  Skipping email sending: Please put your Gmail App Password in newsletter.py to enable email delivery.")
+    if not GMAIL_APP_PASSWORD or SENDER_EMAIL == "your_email@gmail.com":
+        print("\n⚠️  Skipping email sending: SENDER_EMAIL / GMAIL_APP_PASSWORD are not configured. Set them in your .env file or GitHub Secrets.")
         return
-        
+
     try:
         msg = MIMEMultipart('alternative')
         msg['Subject'] = 'Your Recent X Highlights'
@@ -218,8 +223,17 @@ def send_email(html_content, markdown_content):
         server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, msg.as_string())
         server.quit()
         print("✅ Email transmitted successfully to " + RECEIVER_EMAIL + "!")
+    except smtplib.SMTPAuthenticationError as e:
+        print(f"❌ Gmail authentication failed ({e.smtp_code}): {e.smtp_error!r}")
+        print("   Most common causes:")
+        print("     1. GMAIL_APP_PASSWORD is a regular account password, not an App Password.")
+        print("        Generate one at https://myaccount.google.com/apppasswords.")
+        print("     2. 2-Step Verification is not enabled on the sender account (required for App Passwords).")
+        print("     3. SENDER_EMAIL does not match the Google account that issued the App Password.")
+        raise
     except Exception as e:
         print(f"❌ Failed to send email: {e}")
+        raise
 
 async def main():
     brain_data = load_brain()
