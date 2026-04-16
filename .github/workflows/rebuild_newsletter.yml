@@ -1,0 +1,41 @@
+name: Rebuild Newsletter From Brain
+
+# One-shot recovery workflow for when a scheduled run scraped + summarized
+# successfully but the final SMTP delivery failed (see learnings.md #7).
+# Reads cached summaries from brain.json, diffs against a prior git ref,
+# and emails the reconstructed newsletter — no re-scraping, no LLM tokens.
+
+on:
+  workflow_dispatch:
+    inputs:
+      since_sha:
+        description: 'Git SHA (or ref) to diff brain.json against. Defaults to the commit before HEAD (i.e. the last brain.json state before the failed run persisted summaries).'
+        required: false
+        default: 'HEAD~1'
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so arbitrary --since SHAs can be resolved
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install markdown anthropic openai requests pypdf playwright
+
+      - name: Rebuild and Send
+        env:
+          AI_PROVIDER: ${{ secrets.AI_PROVIDER }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: python rebuild_newsletter.py --since "${{ inputs.since_sha }}"
