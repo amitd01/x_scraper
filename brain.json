@@ -99,7 +99,18 @@
     "https://x.com/JJEnglert/status/2031486623171437016",
     "https://x.com/adityaag/status/2031396465063436395",
     "https://x.com/tomcrawshaw01/status/2031350768427761948",
-    "https://x.com/gregisenberg/status/2031107609852325980"
+    "https://x.com/gregisenberg/status/2031107609852325980",
+    "https://x.com/birdabo/status/2045379297024864366",
+    "https://x.com/PeterDiamandis/status/2045155157676372387",
+    "https://x.com/DataChaz/status/2045041696778440973",
+    "https://x.com/LuizaJarovsky/status/2043731297458327657",
+    "https://x.com/RoundtableSpace/status/2043377670860480853",
+    "https://x.com/scmallaby/status/2043642573458170272",
+    "https://x.com/pvergadia/status/2043430961057058888",
+    "https://x.com/Biplab_Debbarma/status/2043637333774475564",
+    "https://x.com/deepakmnadiger/status/2043611641796063583",
+    "https://x.com/alexwg/status/2041267641990725933",
+    "https://x.com/sherlyholmes/status/2041209870582714479"
   ],
   "seen_articles": [
     "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
@@ -146,7 +157,9 @@
     "https://om.co/2026/02/02/openai-and-the-announcement-economy/",
     "https://github.com/tobi/qmd",
     "https://docs.openclaw.ai/gateway/security",
-    "https://www.ft.com/content/7cab4ec7-4712-4137-b602-119a44f771de"
+    "https://www.ft.com/content/7cab4ec7-4712-4137-b602-119a44f771de",
+    "https://www.nytimes.com/2026/04/13/opinion/china-ai-america-chipmakers.html?smid=nytcore-ios-share",
+    "https://lamaterial.com/p/the-unwritten-rules-of-celebrity-podcasts"
   ],
   "topics": {
     "AI Education & Literacy": [
@@ -175,6 +188,10 @@
       {
         "url": "https://om.co/2026/02/02/openai-and-the-announcement-economy/",
         "summary": "In this February 2, 2026 post from his personal blog 'On my Om,' veteran tech journalist and investor Om Malik dissects what he calls the 'New Announcement Economy' \u2014 a media and financial ecosystem where the velocity of a headline matters far more than its underlying truth. His central thesis echoes his broader 'velocity trumps everything' doctrine: in the attention economy, whoever moves fastest wins, and factual accuracy is essentially optional.\n\nMalik uses the Nvidia-OpenAI $100 billion 'deal' as his primary case study. He argues the original September announcement was never a binding agreement \u2014 it was a letter of intent dressed up as a historic partnership. Jensen Huang's stock jumped 4%, Nvidia's market cap surged toward $4.5 trillion, and mission was accomplished before a single dollar was committed. Now that the Wall Street Journal reports talks stalled early, Malik's read is that Huang is actually playing the announcement economy masterfully \u2014 publicly signaling continued OpenAI support while privately distancing himself, all while protecting Nvidia's customer relationship.\n\nHe extends this critique to the Stargate $500 billion AI infrastructure announcement and OpenAI's cumulative $1.4 trillion in 'announced commitments' \u2014 more than 100x its revenue \u2014 framing them as IPO narrative-building rather than real capital deployment.\n\nThis piece connects interestingly to the previous Tim Ferriss summaries: where Ferriss critiques the self-help industry's structural incentive to keep you perpetually seeking, Malik identifies an analogous structural flaw in tech media \u2014 the incentive to generate momentum over meaning. Both are essentially critiques of industries that profit from manufactured urgency rather than durable value."
+      },
+      {
+        "url": "https://lamaterial.com/p/the-unwritten-rules-of-celebrity-podcasts",
+        "summary": "This April 6, 2026 piece from L.A. Material, written by veteran entertainment journalist Amy Kaufman, offers a sharp insider look at how celebrity podcasts have quietly restructured Hollywood's press machine \u2014 and what that means for traditional media's influence over public perception and commercial outcomes.\n\nThe core argument: podcasts have become the dominant promotional vehicle for stars not because they're more effective than legacy media, but because they're safer. Hosts like Jake Shane (Therapuss), Jason Bateman et al. (SmartLess), and Amy Poehler (Good Hang) openly operate under a tacit 'no gotcha' agreement with guests \u2014 including routine post-recording edits at a celebrity's request. Publicists don't formally negotiate editorial control, but the 'amicable and malleable' environment is understood by all parties. This is a deliberate brand-risk calculus: a single unflattering print profile (the article invokes the NYT Magazine piece allegedly costing Bradley Cooper an Oscar nomination) can do lasting damage, while a two-hour podcast gives stars 'space to breathe' and reduces cancellation risk.\n\nThe piece maps the ecosystem's hierarchy: Joe Rogan remains the undisputed reach king (~15M listeners/episode) but carries reputational risk for non-comedians; Amy Poehler's Good Hang is the prestige safe harbor; New Heights (the Kelce brothers) has crossed into A-list film territory via Brad Pitt; and Call Her Daddy and Jay Shetty's On Purpose serve mid-tier promotional needs.\n\nCritically, Kaufman notes that even insiders can't quantify podcast ROI on ticket sales or ratings \u2014 'we all don't fucking know' \u2014 which distinguishes this from traditional media's once-legible impact metrics. Print profiles, meanwhile, are being quietly abandoned by publicists who see diminishing returns.\n\nThis connects interestingly to the previous Tim Ferriss roundtable summary, where figures like Cal Newport and Craig Mod discussed intentional media consumption and the value of depth over noise. Kaufman's piece is essentially the supply-side mirror: the media being consumed is being engineered for comfort, not depth, raising implicit questions about what 'authentic' conversation even means in a promotional context."
       }
     ],
     "Access Error / Unreadable Content": [
@@ -278,6 +295,10 @@
       },
       {
         "url": "https://www.nytimes.com/2026/03/27/opinion/technology-mental-fitness-cognitive.html?smid=tw-share",
+        "summary": "Could not extract readable content from the page."
+      },
+      {
+        "url": "https://www.nytimes.com/2026/04/13/opinion/china-ai-america-chipmakers.html?smid=nytcore-ios-share",
         "summary": "Could not extract readable content from the page."
       }
     ],
